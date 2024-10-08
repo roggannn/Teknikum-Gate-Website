@@ -54,11 +54,12 @@ header h1{
     color:lightsteelblue;
     font-family: myFirstFont;
     font-size: 50px;
+    text-shadow: 3px 2px black;
 }
 
 main{
     grid-area: main;
-    background-image:linear-gradient(#F0C808, #FFF1D0);
+    background-image:linear-gradient(#F0C808, #DD1C1A);
 }
 
 .navbar{
@@ -67,11 +68,13 @@ main{
     grid-row-start: 1;
     grid-row-end: 1;
     background-color: #DD1C1A;
+    background-image: linear-gradient(to right, #c42826,  #DD1C1A, #DD1C1A, #DD1C1A);
     height: fit-content;
     width:fit-content;
     border-radius:20px;
     margin-top: 90px;
     margin-left: 55px;
+    margin-bottom: 3px;
 }
 
 .divider{
