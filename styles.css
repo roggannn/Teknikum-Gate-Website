@@ -24,6 +24,20 @@
     "main main main main main main main main main main";
 }
 
+.biljetterContent{
+    display:grid;
+    width:100vw;
+    padding:0;
+    margin:0;
+    grid-template-columns: repeat(6,1.25fr);
+    grid-auto-rows: minmax(80px, auto);
+    border:0;
+    gap:0;
+
+    grid-template-areas:
+    "headerB headerB headerB headerB headerB headerB";
+}
+
 body{
     margin: 0;
     width: 100vw;
@@ -31,7 +45,7 @@ body{
 }
 
 
-header{
+.indexH{
     grid-area: header;
     background-image:linear-gradient(#07A0C3, #086788);
     padding: 0;
@@ -40,12 +54,16 @@ header{
     border: 0;
 }
 
-@font-face {
-    font-family: myFirstFont;
-    src: url(Resources/Fonts/Soulmeh.otf);
-  }
+.biljetterH{
+    grid-area: headerB;
+    background-image:linear-gradient(#07A0C3, #086788);
+    padding: 0;
+    margin: 0;
+    gap: 0;
+    border: 0;
+}
 
-header h1{
+.biljetterH h1{
     margin-top:0px;
     padding-top: 10px;
     padding-left: 0px;
@@ -57,12 +75,29 @@ header h1{
     text-shadow: 3px 2px black;
 }
 
-main{
+@font-face {
+    font-family: myFirstFont;
+    src: url(Resources/Fonts/Soulmeh.otf);
+  }
+
+.indexH h1{
+    margin-top:0px;
+    padding-top: 10px;
+    padding-left: 0px;
+    text-align: left;
+    text-indent: 30px;
+    color:lightsteelblue;
+    font-family: myFirstFont;
+    font-size: 50px;
+    text-shadow: 3px 2px black;
+}
+
+.indexM{
     grid-area: main;
     background-image:linear-gradient(#F0C808, #DD1C1A);
 }
 
-.navbar{
+.navbarindex{
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row-start: 1;
@@ -77,7 +112,7 @@ main{
     margin-bottom: 3px;
 }
 
-.divider{
+.dividerindex{
     grid-column-start: 1;
     grid-column-end: 11;
     background-color: black;
@@ -86,7 +121,7 @@ main{
     height: 20px;
 }
 
-.navbar ul{
+.navbarindex ul{
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -94,12 +129,12 @@ main{
     border-radius:20px;
 }
 
-.navbar li {
+.navbarindex li {
     float:left;
     
 }
 
-.navbar a{
+.navbarindex a{
     color: white;
     text-decoration: none;
     padding: 15px;
@@ -107,7 +142,48 @@ main{
     text-align:center;
 }
 
-.navbar a:hover{
+.navbarindex a:hover{
     background-color: #ad1816;
     transition: 0.5s;
 }
+
+.navbarBiljetter{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    background-color: #DD1C1A;
+    background-image: linear-gradient(to right, #c42826,  #DD1C1A, #DD1C1A, #DD1C1A);
+    height: fit-content;
+    width: fit-content;
+    border-radius: 20px;
+    margin-top: 90px;
+    margin-left: 55px;
+    margin-bottom: 3px;
+}
+
+.navbarBiljetter ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border-radius:20px;
+}
+
+.navbarBiljetter li {
+    float:left;   
+}
+
+.navbarBiljetter a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display:block;
+    text-align:center;
+}
+
+.navbarBiljetter a:hover{
+    background-color: #ad1816;
+    transition: 0.5s;
+}
+
