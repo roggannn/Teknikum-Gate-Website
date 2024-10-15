@@ -35,7 +35,18 @@
     gap:0;
 
     grid-template-areas:
-    "headerB headerB headerB headerB headerB headerB";
+    "headerB headerB headerB headerB headerB headerB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB";
 }
 
 body{
@@ -52,6 +63,11 @@ body{
     margin: 0;
     gap: 0;
     border: 0;
+}
+
+.biljetterM{
+    grid-area: mainB;
+    background-color: #F0C808;
 }
 
 .biljetterH{
@@ -80,6 +96,11 @@ body{
     src: url(Resources/Fonts/Soulmeh.otf);
   }
 
+@font-face {
+    font-family: moonKids;
+    src: url(Resources/Fonts/Moonkids.otf);
+  }
+
 .indexH h1{
     margin-top:0px;
     padding-top: 10px;
@@ -92,10 +113,37 @@ body{
     text-shadow: 3px 2px black;
 }
 
+.flexBoxBiljetter{
+    display:flex;
+    grid-column-start:2;
+    grid-column-end:6;
+    grid-row-start:6;
+    grid-row-end:12;
+    background-color: red;
+    border: 3px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexBoxBiljetter .biljett1{
+    background-color:#07A0C3;
+    width:200px;
+    height:200px;
+}
+
 .indexM{
     grid-area: main;
     background-image:linear-gradient(#F0C808, #DD1C1A);
 }
+
+.biljetterM h1{
+    text-align: center;
+    margin-top: 250px;
+    font-size: 50px;
+    font-family: moonKids;
+    text-decoration:underline;
+}
+
 
 .navbarindex{
     grid-column-start: 1;
@@ -131,7 +179,6 @@ body{
 
 .navbarindex li {
     float:left;
-    
 }
 
 .navbarindex a{
@@ -185,5 +232,14 @@ body{
 .navbarBiljetter a:hover{
     background-color: #ad1816;
     transition: 0.5s;
+}
+
+.dividerBiljetter{
+    grid-column-start: 1;
+    grid-column-end: 11;
+    background-image: linear-gradient(black, rgb(70, 69, 69));
+    grid-row-start: 2;
+    grid-row-end: 2;
+    height: 20px;
 }
 
