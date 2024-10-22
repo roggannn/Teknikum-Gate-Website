@@ -49,12 +49,48 @@
     "mainB mainB mainB mainB mainB mainB";
 }
 
+.personalcontent{
+    display:grid;
+    width:100vw;
+    padding:0;
+    margin:0;
+    grid-template-columns: repeat(10,1fr);
+    grid-auto-rows: minmax(80px, auto);
+    border:0;
+    gap:0;
+
+    grid-template-areas:
+    "header header header header header header header header header header"
+    "mainP mainP mainP mainP mainP mainP mainP mainP mainP mainP"
+    "mainP mainP mainP mainP mainP mainP mainP mainP mainP mainP"
+    "mainP mainP mainP mainP mainP mainP mainP mainP mainP mainP"
+    "mainP mainP mainP mainP mainP mainP mainP mainP mainP mainP"
+    "mainP mainP mainP mainP mainP mainP mainP mainP mainP mainP"
+    "mainP mainP mainP mainP mainP mainP mainP mainP mainP mainP"
+    "mainP mainP mainP mainP mainP mainP mainP mainP mainP mainP"
+    "mainP mainP mainP mainP mainP mainP mainP mainP mainP mainP"
+    "mainP mainP mainP mainP mainP mainP mainP mainP mainP mainP"
+    "mainP mainP mainP mainP mainP mainP mainP mainP mainP mainP";
+}
+
 body{
     margin: 0;
     width: 100vw;
     height: 100vh;
 }
 
+.personalM{
+    grid-area: mainP;
+    background-image:linear-gradient(rgb(116, 161, 187), rgb(178, 201, 207))
+}
+
+.containerPersonal{
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 4;
+    grid-row-end: 11;
+    border: 3px solid black;
+}
 
 .indexH{
     grid-area: header;
@@ -155,14 +191,14 @@ body{
     transition: 1s;
 }
 
-.flexBoxBiljetter .biljett3{
-    background-color: aqua;
-    width: 230px;
-    height: 360px;
-    border: 2px solid black;
-    margin-bottom: 60px;
-    transition: 1s;
-    
+.flexBoxBiljetter .biljett1 h1{
+    text-align: center;
+    margin-top: 0;
+}
+
+.flexBoxBiljetter .biljett2 h1{
+    text-align:center;
+    margin-top: 0;
 }
 
 .flexBoxBiljetter .biljett3:hover{
