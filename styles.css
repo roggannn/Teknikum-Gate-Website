@@ -94,7 +94,7 @@ body{
 
 .indexH{
     grid-area: header;
-    background-image:linear-gradient(#07A0C3, #086788);
+    background-image:linear-gradient(#2d2e2e, #242525);
     padding: 0;
     margin: 0;
     gap: 0;
@@ -111,14 +111,24 @@ body{
     border: 2px solid black;
 }
 
+.IntroduktionBox .Huvud{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.IntroduktionBox .tes{
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .biljetterM{
     grid-area: mainB;
-    background-color: #F0C808;
+    background-image:linear-gradient(rgb(116, 161, 187), rgb(178, 201, 207))
 }
 
 .biljetterH{
     grid-area: headerB;
-    background-image:linear-gradient(#07A0C3, #086788);
+    background-image:linear-gradient(#2d2e2e, #242525);
     padding: 0;
     margin: 0;
     gap: 0;
@@ -130,8 +140,8 @@ body{
     padding-top: 10px;
     padding-left: 0px;
     text-align: left;
-    text-indent: 30px;
-    color:lightsteelblue;
+    text-indent: 260px;
+    color:rgb(233, 227, 227);
     font-family: myFirstFont;
     font-size: 50px;
     text-shadow: 3px 2px black;
@@ -152,8 +162,8 @@ body{
     padding-top: 10px;
     padding-left: 0px;
     text-align: left;
-    text-indent: 30px;
-    color:lightsteelblue;
+    text-indent: 260px;
+    color:rgb(233, 227, 227);
     font-family: myFirstFont;
     font-size: 50px;
     text-shadow: 3px 2px black;
@@ -219,7 +229,7 @@ body{
 
 .indexM{
     grid-area: main;
-    background-image:linear-gradient(#F0C808, #DD1C1A);
+    background-image:linear-gradient(rgb(116, 161, 187), rgb(178, 201, 207))
 }
 
 .biljetterM h1{
@@ -232,8 +242,8 @@ body{
 
 
 .navbarindex{
-    grid-column-start: 1;
-    grid-column-end: 6;
+    grid-column-start: 7;
+    grid-column-end: 10;
     grid-row-start: 1;
     grid-row-end: 1;
     background-color: #DD1C1A;
@@ -241,8 +251,8 @@ body{
     height: fit-content;
     width:fit-content;
     border-radius:20px;
-    margin-top: 90px;
-    margin-left: 55px;
+    margin-top: 20px;
+    margin-left: 120px;
     margin-bottom: 3px;
 }
 
@@ -252,7 +262,7 @@ body{
     background-color: black;
     grid-row-start: 2;
     grid-row-end: 2;
-    height: 20px;
+    height: 10px;
 }
 
 .navbarindex ul{
@@ -281,8 +291,8 @@ body{
 }
 
 .navbarBiljetter{
-    grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-start: 5;
+    grid-column-end: 7;
     grid-row-start: 1;
     grid-row-end: 1;
     background-color: #DD1C1A;
@@ -290,8 +300,8 @@ body{
     height: fit-content;
     width: fit-content;
     border-radius: 20px;
-    margin-top: 90px;
-    margin-left: 55px;
+    margin-top: 20px;
+    margin-left: -8px;
     margin-bottom: 3px;
 }
 
@@ -323,9 +333,9 @@ body{
 .dividerBiljetter{
     grid-column-start: 1;
     grid-column-end: 11;
-    background-image: linear-gradient(black, rgb(70, 69, 69));
+    background-color:black;
     grid-row-start: 2;
     grid-row-end: 2;
-    height: 20px;
+    height: 10px;
 }
 
