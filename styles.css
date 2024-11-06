@@ -373,10 +373,29 @@ body{
 }
 
 .Vlad{
+    display:flex;
     border: 1px solid black;
     height: 350px;
     width: 265px;
     margin: 15px;
+    margin-top: 4px;
+    flex-wrap:wrap;
+}
+
+.Vlad .flex{
+    display:flex;
+    background-color:white;
+    width:inherit;
+    height:50px;
+    text-align:center;
+    align-self:end;
+    margin-bottom: 0;
+    justify-content:center;
+}
+
+.Vlad .flex h1{
+    font-size: 23px;
+    align-self: center;
 }
 
 .Noah{
@@ -387,6 +406,27 @@ body{
     margin: 15px;
     margin-top: 4px;
     flex-wrap:wrap;
+}
+
+.Noah .flex{
+    display:flex;
+    background-color:white;
+    width:inherit;
+    height:50px;
+    text-align:center;
+    align-self:end;
+    margin-bottom: 0;
+    justify-content:center;
+}
+
+.Noah .flex h1{
+    font-size: 23px;
+    align-self: center;
+}
+
+.Noah img{
+    width:265px;
+    height:300px;
 }
 
 .Casper{
@@ -400,36 +440,82 @@ body{
     
 }
 
-.Noah h1{
-    font-size: 20px;
+.Casper .flex{
+    display:flex;
     background-color:white;
     width:inherit;
     height:50px;
     text-align:center;
     align-self:end;
     margin-bottom: 0;
+    justify-content:center;
 }
 
-.Casper h1{
-    font-size: 20px;
-    background-color:white;
-    width:inherit;
-    height:50px;
+.Casper .flex h1{
+    font-size: 23px;
     text-align:center;
-    align-self:end;
-    margin-bottom: 0;
+}
+
+.Casper img{
+    width:265px;
+    height:300px;
 }
 
 .Anton{
+    display:flex;
     border: 1px solid black;
     height: 350px;
     width: 265px;
     margin: 15px;
+    margin-top: 4px;
+    flex-wrap:wrap;
+    
+}
+
+.Anton .flex{
+    display:flex;
+    background-color:white;
+    width:inherit;
+    height:50px;
+    text-align:center;
+    align-self:end;
+    margin-bottom: 0;
+    justify-content:center;
+}
+
+.Anton .flex h1{
+    font-size: 23px;
+    align-self: center;
+}
+
+.Anton img{
+    width:265px;
+    height:300px;
 }
 
 .Oskar{
+    display:flex;
     border: 1px solid black;
     height: 350px;
     width: 265px;
     margin: 15px;
+    margin-top: 4px;
+    flex-wrap:wrap;
+    
+}
+
+.Oskar .flex{
+    display:flex;
+    background-color:white;
+    width:inherit;
+    height:50px;
+    text-align:center;
+    align-self:end;
+    margin-bottom: 0;
+    justify-content:center;
+}
+
+.Oskar .flex h1{
+    font-size: 23px;
+    align-self: center;
 }
