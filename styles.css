@@ -195,7 +195,7 @@ body{
 }
 
 .flexBoxBiljetter .biljett2{
-    display:flexbox;
+    
     background-color: #086788;
     width: 230px;
     height: 360px;
@@ -231,13 +231,6 @@ body{
 
 .flexBoxBiljetter .biljett2 h2:hover{
     font-size:larger;
-}
-
-.containerPersonal{
-    display:flexbox;
-    justify-content: space-evenly;
-    flex-wrap:wrap;
-    
 }
 
 
@@ -376,3 +369,51 @@ body{
     height: 10px;
 }
 
+.containerPersonal{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+
+}
+
+.Vlad{
+    border: 1px solid black;
+    height: 400px;
+    width: 250px;
+    margin: 15px;
+    padding: 20px;
+}
+
+.Noah{
+    border: 1px solid black;
+    height: 400px;
+    width: 250px;
+    margin: 15px;
+    margin-top: 4px;
+    padding: 20px;
+}
+
+.Casper{
+    border: 1px solid black;
+    height: 400px;
+    width: 250px;
+    margin: 15px;
+    margin-top: 4px;
+    padding: 20px;
+}
+
+.Anton{
+    border: 1px solid black;
+    height: 400px;
+    width: 250px;
+    margin: 15px;
+    padding: 20px;
+}
+
+.Oskar{
+    border: 1px solid black;
+    height: 400px;
+    width: 250px;
+    margin: 15px;
+    padding: 20px;
+}
