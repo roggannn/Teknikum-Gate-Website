@@ -426,7 +426,7 @@ body{
 
 .Noah img{
     width:265px;
-    height:300px;
+    max-height:86%;
 }
 
 .Casper{
@@ -458,7 +458,7 @@ body{
 
 .Casper img{
     width:265px;
-    height:300px;
+    max-height:86%;
 }
 
 .Anton{
@@ -490,7 +490,7 @@ body{
 
 .Anton img{
     width:265px;
-    height:300px;
+    max-height:86%;
 }
 
 .Oskar{
