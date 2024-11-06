@@ -85,14 +85,6 @@ body{
     background-image:linear-gradient(rgb(116, 161, 187), rgb(178, 201, 207))
 }
 
-.containerPersonal{
-    grid-column-start: 3;
-    grid-column-end: 9;
-    grid-row-start: 4;
-    grid-row-end: 11;
-    border: 3px solid black;
-}
-
 
 .indexH{
     grid-area: header;
@@ -373,47 +365,71 @@ body{
     display:flex;
     justify-content: space-evenly;
     flex-wrap:wrap;
-
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 4;
+    grid-row-end: 9;
+    border: 3px solid black;
 }
 
 .Vlad{
     border: 1px solid black;
-    height: 400px;
-    width: 250px;
+    height: 350px;
+    width: 265px;
     margin: 15px;
-    padding: 20px;
 }
 
 .Noah{
+    display:flex;
     border: 1px solid black;
-    height: 400px;
-    width: 250px;
+    height: 350px;
+    width: 265px;
     margin: 15px;
     margin-top: 4px;
-    padding: 20px;
+    flex-wrap:wrap;
 }
 
 .Casper{
+    display:flex;
     border: 1px solid black;
-    height: 400px;
-    width: 250px;
+    height: 350px;
+    width: 265px;
     margin: 15px;
     margin-top: 4px;
-    padding: 20px;
+    flex-wrap:wrap;
+    
+}
+
+.Noah h1{
+    font-size: 20px;
+    background-color:white;
+    width:inherit;
+    height:50px;
+    text-align:center;
+    align-self:end;
+    margin-bottom: 0;
+}
+
+.Casper h1{
+    font-size: 20px;
+    background-color:white;
+    width:inherit;
+    height:50px;
+    text-align:center;
+    align-self:end;
+    margin-bottom: 0;
 }
 
 .Anton{
     border: 1px solid black;
-    height: 400px;
-    width: 250px;
+    height: 350px;
+    width: 265px;
     margin: 15px;
-    padding: 20px;
 }
 
 .Oskar{
     border: 1px solid black;
-    height: 400px;
-    width: 250px;
+    height: 350px;
+    width: 265px;
     margin: 15px;
-    padding: 20px;
 }
