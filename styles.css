@@ -379,6 +379,12 @@ body{
     margin: 15px;
     margin-top: 4px;
     flex-wrap:wrap;
+    transition:0.1s;
+}
+
+.Vlad:hover{
+    height:360px;
+    width:275px;
 }
 
 .Vlad .flex{
@@ -405,13 +411,19 @@ body{
     margin: 15px;
     margin-top: 4px;
     flex-wrap:wrap;
+    transition:0.1s;
+}
+
+.Noah:hover{
+    height:360px;
+    width:275px;
 }
 
 .Noah .flex{
     display:flex;
     background-color:white;
     width:inherit;
-    height:50px;
+    height:12%;
     text-align:center;
     align-self:end;
     margin-bottom: 0;
@@ -424,8 +436,8 @@ body{
 }
 
 .Noah img{
-    width:265px;
-    max-height:86%;
+    width:inherit;
+    max-height:88%;
 }
 
 .Casper{
@@ -436,34 +448,34 @@ body{
     margin: 15px;
     margin-top: 4px;
     flex-wrap:wrap;
-    
+    transition:0.1s;
+}
+
+.Casper:hover{
+    height:360px;
+    width:275px;
 }
 
 .Casper .flex{
     display:flex;
     background-color:white;
     width:inherit;
-    height:50px;
-    text-align:center;
+    height:12%;
     align-self:end;
     margin-bottom: 0;
     justify-content:center;
-    transition: 0.1s;
+
 }
+
 
 .Casper .flex h1{
-    font-size: 23px;
-    text-align:center;
-}
-
-.Casper:hover .flex {
-    height:120%;
-    width:120%;
+    font-size:23px;
+    align-self:center;
 }
 
 .Casper img{
-    width:265px;
-    max-height:86%;
+    width:inherit;
+    max-height:88%;
 }
 
 .Anton{
@@ -474,14 +486,19 @@ body{
     margin: 15px;
     margin-top: 4px;
     flex-wrap:wrap;
-    
+    transition:0.1s;
+}
+
+.Anton:hover{
+    height:360px;
+    width:275px;
 }
 
 .Anton .flex{
     display:flex;
     background-color:white;
     width:inherit;
-    height:50px;
+    height:12%;
     text-align:center;
     align-self:end;
     margin-bottom: 0;
@@ -494,8 +511,8 @@ body{
 }
 
 .Anton img{
-    width:265px;
-    max-height:86%;
+    width:inherit;
+    max-height:88%;
 }
 
 .Oskar{
@@ -506,7 +523,12 @@ body{
     margin: 15px;
     margin-top: 4px;
     flex-wrap:wrap;
-    
+    transition:0.1s;
+}
+
+.Oskar:hover{
+    height:360px;
+    width:275px;
 }
 
 .Oskar .flex{
