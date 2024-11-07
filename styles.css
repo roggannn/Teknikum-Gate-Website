@@ -382,6 +382,11 @@ body{
     transition:0.1s;
 }
 
+.Vlad img{
+    width:inherit;
+    max-height:88%;
+}
+
 .Vlad:hover{
     height:360px;
     width:275px;
@@ -391,7 +396,7 @@ body{
     display:flex;
     background-color:white;
     width:inherit;
-    height:50px;
+    height:12%;
     text-align:center;
     align-self:end;
     margin-bottom: 0;
@@ -535,7 +540,7 @@ body{
     display:flex;
     background-color:white;
     width:inherit;
-    height:50px;
+    height:12%;
     text-align:center;
     align-self:end;
     margin-bottom: 0;
