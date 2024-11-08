@@ -22,6 +22,7 @@
     "main main main main main main main main main main"
     "main main main main main main main main main main"
     "main main main main main main main main main main"
+    "main main main main main main main main main main"
     "main main main main main main main main main main";
 }
 
@@ -531,9 +532,15 @@ body{
     transition:0.1s;
 }
 
+
 .Oskar:hover{
     height:360px;
     width:275px;
+}
+
+.Oskar img{
+    width:inherit;
+    max-height:88%;
 }
 
 .Oskar .flex{
