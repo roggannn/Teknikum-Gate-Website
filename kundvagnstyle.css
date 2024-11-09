@@ -1,0 +1,17 @@
+.BakKnapp a{
+    background-color: aliceblue;
+    width:min-content;
+    height:45px;
+    border-radius:5px;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+.BakKnapp a p{
+    color:black;
+    width:min-content;
+    border-radius:5px;
+    cursor:pointer;
+    text-decoration: none;
+    border: 1px solid black;
+}
