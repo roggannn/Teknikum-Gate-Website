@@ -220,34 +220,35 @@ body{
     box-shadow:2px 3px 3px rgb(103, 104, 103);
 }
 
-.flexBoxBiljetter .biljett2 h2{
-   font-size: 15px; 
-   cursor:pointer;
-   transition: 0.1s;
-   align-self:flex-end;
-}
 
-.flexBoxBiljetter .biljett1 h2{
+.flexBoxBiljetter .biljett1 button{
     font-size: 15px; 
     cursor:pointer;
     transition: 0.1s;
     align-self:flex-end;
+    background-color: #086788;
+    border:0;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.flexBoxBiljetter .biljett1 h2:hover{
+.flexBoxBiljetter .biljett2 button{
+    font-size: 15px; 
+    cursor:pointer;
+    transition: 0.1s;
+    align-self:flex-end;
+    background-color: #086788;
+    border:0;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.flexBoxBiljetter .biljett1 button:hover{
     font-size:larger;
 }
 
-.flexBoxBiljetter .biljett1 h2:active{
-    color:#086788;
-}
-
-.flexBoxBiljetter .biljett2 h2:hover{
+.flexBoxBiljetter .biljett2 button:hover{
     font-size:larger;
-}
-
-.flexBoxBiljetter .biljett2 h2:active{
-    color:#086788;
 }
 
 
