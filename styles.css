@@ -1,4 +1,6 @@
 /* Färgschema https://coolors.co/086788-07a0c3-f0c808-fff1d0-dd1c1a */
+@import url(mobilestyles.css);
+
 
 .content{
     display:grid;
@@ -23,7 +25,7 @@
     "main main main main main main main main main main"
     "main main main main main main main main main main"
     "main main main main main main main main main main"
-    "main main main main main main main main main main";
+    "footer footer footer footer footer footer footer footer footer footer";
 }
 
 .biljetterContent{
@@ -583,3 +585,19 @@ body{
     align-self: center;
 }
 
+.feet{
+    grid-area:footer;
+    display:grid;
+    background-color:#252b2b;
+    min-height:200px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+
+    grid-template-areas:
+    "sponsor kontakt socialamedier logo";
+}
+
+.feet .sponsorer{
+    grid-area:sponsor;
+
+}
