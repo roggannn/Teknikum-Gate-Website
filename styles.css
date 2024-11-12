@@ -599,5 +599,13 @@ body{
 
 .feet .sponsorer{
     grid-area:sponsor;
+    display:flex;
+    margin:10px;
+    margin-top:25px;
+    gap:5px;
+}
 
+.feet .sponsorer .preem{
+    width:40px;
+    height:40px;
 }
