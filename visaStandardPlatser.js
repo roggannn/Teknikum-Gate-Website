@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded"), function(){
-    const toggleButton = document.getElementById('StandardKnapp');
-    const toggleElement = document.getElementById('standardPlatser');
+const toggleButton = document.getElementById('StandardKnapp');
+const toggleElement = document.getElementById('standardPlatser');
 
-    toggleButton.addEventListener('click'), function() {
+document.addEventListener("DOMContentLoaded", function(){
+    toggleButton.addEventListener('click', function() {
         if (toggleElement.style.visibility === 'hidden')
         {
             toggleElement.style.visibility = 'visible';
@@ -11,5 +11,5 @@ document.addEventListener("DOMContentLoaded"), function(){
         {
             toggleElement.style.visibility = 'hidden';
         }
-    }
-}
+    });
+});

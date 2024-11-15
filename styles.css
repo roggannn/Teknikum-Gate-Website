@@ -230,7 +230,6 @@ body{
 .flexBoxBiljetter .biljett1 button{
     font-size: 15px; 
     cursor:pointer;
-    transition: 0.1s;
     align-self:flex-end;
     background-color: #086788;
     border:0;
@@ -241,7 +240,6 @@ body{
 .flexBoxBiljetter .biljett2 button{
     font-size: 15px; 
     cursor:pointer;
-    transition: 0.1s;
     align-self:flex-end;
     background-color: #086788;
     border:0;
@@ -663,10 +661,6 @@ body{
 
 }
 
-.visible {
-    visibility: visible; /* Make it visible */
-    opacity: 1;           /* Fully opaque */
-    transition: opacity 0.5s ease, visibility 0s;
 
 .flexBoxPlatser .plats1{
     grid-area:plats1;
