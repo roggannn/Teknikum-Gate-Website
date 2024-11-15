@@ -50,6 +50,10 @@
     "mainB mainB mainB mainB mainB mainB"
     "mainB mainB mainB mainB mainB mainB"
     "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
     "mainB mainB mainB mainB mainB mainB";
 }
 
@@ -639,4 +643,502 @@ body{
     grid-area:logo;
     display:flex;
     border: 1px solid black;
+}
+
+.flexBoxPlatser{
+    visibility:hidden;
+    display:grid;
+    grid-template-columns: repeat(25,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-row-start: 13;
+    grid-row-end: 13;
+    grid-column-start:2;
+    grid-column-end:7;
+    transform:translateX(-10%);
+    transition: opacity 0.5s ease, visibility 0s 0.5s;
+
+    grid-template-areas: 
+    "plats1 plats2 plats3 plats4 plats5 plats6 plats7 plats8 plats9 plats10 plats11 plats12 plats13 plats14 plats15 plats16 plats17 plats18 plats19 plats20 plats21 plats22 plats23 plats24 plats25"
+    "plats26 plats27 plats28 plats29 plats30 plats31 plats32 plats33 plats34 plats35 plats36 plats37 plats38 plats39 plats40 plats41 plats42 plats43 plats44 plats45 plats46 plats47 plats48 plats49 plats50";
+
+}
+
+.visible {
+    visibility: visible; /* Make it visible */
+    opacity: 1;           /* Fully opaque */
+    transition: opacity 0.5s ease, visibility 0s;
+
+.flexBoxPlatser .plats1{
+    grid-area:plats1;
+    background-color: #088853;
+    border:1px solid black;
+    width: 40px;
+    height: 40px;
+}
+
+.flexBoxPlatser .plats2{
+    grid-area:plats2;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats3{
+    grid-area:plats3;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats4{
+    grid-area:plats4;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats5{
+    grid-area:plats5;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats6{
+    grid-area:plats6;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats7{
+    grid-area:plats7;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats8{
+    grid-area:plats8;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats9{
+    grid-area:plats9;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats10{
+    grid-area:plats10;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats11{
+    grid-area:plats11;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats12{
+    grid-area:plats12;
+    background-color: #088853;   
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats13{
+    grid-area:plats13;
+    background-color: #088853;   
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats14{
+    grid-area:plats14;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats15{
+    grid-area:plats15;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats16{
+    grid-area:plats16;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats17{
+    grid-area:plats17;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats18{
+    grid-area:plats18;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats19{
+    grid-area:plats19;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats20{
+    grid-area:plats20;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats21{
+    grid-area:plats21;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats22{
+    grid-area:plats22;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats23{
+    grid-area:plats23;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats24{
+    grid-area:plats24;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats25{
+    grid-area:plats25;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    border:1px solid black;
+}
+
+/* ANDRA RADEN */
+
+.flexBoxPlatser .plats26{
+    grid-area:plats26;
+    background-color: #088853;
+    border:1px solid black;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+}
+
+.flexBoxPlatser .plats27{
+    grid-area:plats27;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats28{
+    grid-area:plats28;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats29{
+    grid-area:plats29;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats30{
+    grid-area:plats30;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats31{
+    grid-area:plats31;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats32{
+    grid-area:plats32;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats33{
+    grid-area:plats33;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats34{
+    grid-area:plats34;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats35{
+    grid-area:plats35;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats36{
+    grid-area:plats36;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats37{
+    grid-area:plats37;
+    background-color: #088853;   
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats38{
+    grid-area:plats38;
+    background-color: #088853;   
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats39{
+    grid-area:plats39;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats40{
+    grid-area:plats40;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats41{
+    grid-area:plats41;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats42{
+    grid-area:plats42;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats43{
+    grid-area:plats43;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats44{
+    grid-area:plats44;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats45{
+    grid-area:plats45;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats46{
+    grid-area:plats46;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats47{
+    grid-area:plats47;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats48{
+    grid-area:plats48;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats49{
+    grid-area:plats49;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
+}
+
+.flexBoxPlatser .plats50{
+    grid-area:plats50;
+    background-color: #088853;
+    margin-left:1px;
+    width: 40px;
+    height: 40px;
+    margin-top:5px;
+    border:1px solid black;
 }
