@@ -647,7 +647,7 @@ body{
     visibility:hidden;
     display:grid;
     grid-template-columns: repeat(25,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: minmax(40px, auto);
     grid-row-start: 13;
     grid-row-end: 13;
     grid-column-start:2;
@@ -1135,4 +1135,9 @@ body{
     height: 40px;
     margin-top:5px;
     border:1px solid black;
+}
+
+.OBS{
+    grid-column:3 / 8;
+    grid-row: 12 / 12;
 }
