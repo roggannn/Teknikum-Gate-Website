@@ -1020,7 +1020,7 @@ body{
 .flexBoxPlatser .plats39{
     grid-area:plats39;
     background-color: #088853;
-    margin-left:1px;
+    margin:4px;
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1030,7 +1030,7 @@ body{
 .flexBoxPlatser .plats40{
     grid-area:plats40;
     background-color: #088853;
-    margin-left:1px;
+    margin:4px;
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1040,7 +1040,7 @@ body{
 .flexBoxPlatser .plats41{
     grid-area:plats41;
     background-color: #088853;
-    margin-left:1px;
+    margin:4px;
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1050,7 +1050,7 @@ body{
 .flexBoxPlatser .plats42{
     grid-area:plats42;
     background-color: #088853;
-    margin-left:1px;
+    margin:4px;
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1060,7 +1060,7 @@ body{
 .flexBoxPlatser .plats43{
     grid-area:plats43;
     background-color: #088853;
-    margin-left:1px;
+    margin:4px;
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1070,7 +1070,7 @@ body{
 .flexBoxPlatser .plats44{
     grid-area:plats44;
     background-color: #088853;
-    margin-left:1px;
+    margin:4px;
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1080,7 +1080,7 @@ body{
 .flexBoxPlatser .plats45{
     grid-area:plats45;
     background-color: #088853;
-    margin-left:1px;
+    margin:4px;
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1090,7 +1090,7 @@ body{
 .flexBoxPlatser .plats46{
     grid-area:plats46;
     background-color: #088853;
-    margin-left:1px;
+    margin:4px;
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1100,7 +1100,7 @@ body{
 .flexBoxPlatser .plats47{
     grid-area:plats47;
     background-color: #088853;
-    margin-left:1px;
+    margin:4px;
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1110,7 +1110,7 @@ body{
 .flexBoxPlatser .plats48{
     grid-area:plats48;
     background-color: #088853;
-    margin-left:1px;
+    margin:4px;
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1120,7 +1120,7 @@ body{
 .flexBoxPlatser .plats49{
     grid-area:plats49;
     background-color: #088853;
-    margin-left:1px;
+    margin:4px;
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1130,14 +1130,16 @@ body{
 .flexBoxPlatser .plats50{
     grid-area:plats50;
     background-color: #088853;
-    margin-left:1px;
+    margin:4px;
     width: 40px;
     height: 40px;
     margin-top:5px;
     border:1px solid black;
+    cursor:pointer;
 }
 
 .OBS{
     grid-column:3 / 8;
     grid-row: 12 / 12;
+    font-weight: bolder;
 }
