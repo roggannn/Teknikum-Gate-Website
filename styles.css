@@ -1,5 +1,14 @@
-/* Färgschema https://coolors.co/086788-07a0c3-f0c808-fff1d0-dd1c1a */
+/* Färgschema https://coolors.co/visualizer/0d3b66-faf0ca-f4d35e-ee964b-f95738 */
 @import url(mobilestyles.css);
+
+:root{
+    --primary-color:#0d3b66;
+    --secondary-color:#faf0ca;
+    --secondary-color2:whitesmoke;
+    --accent-color:#f4d35e;
+    --accent-color2:#ee964b;
+    --accent-color3:#f95738;
+}
 
 
 .content{
@@ -89,13 +98,13 @@ body{
 
 .personalM{
     grid-area: mainP;
-    background-image:linear-gradient(rgb(116, 161, 187), rgb(178, 201, 207))
+    background-color:var(--primary-color);
 }
 
 
 .indexH{
     grid-area: header;
-    background-image:linear-gradient(#2d2e2e, #242525);
+    background-color:var(--secondary-color2);
     padding: 0;
     margin: 0;
     gap: 0;
@@ -123,7 +132,7 @@ body{
 }
 
 .IntroduktionBox{
-    background-color: #f08408;
+    background-color: var(--accent-color3);
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 4;
@@ -144,12 +153,12 @@ body{
 
 .biljetterM{
     grid-area: mainB;
-    background-image:linear-gradient(rgb(116, 161, 187), rgb(178, 201, 207))
+    background-color:var(--primary-color);
 }
 
 .biljetterH{
     grid-area: headerB;
-    background-image:linear-gradient(#2d2e2e, #242525);
+    background-color:var(--secondary-color2);
     padding: 0;
     margin: 0;
     gap: 0;
@@ -196,7 +205,7 @@ body{
     grid-column-end:6;
     grid-row-start:6;
     grid-row-end:12;
-    background-color: rgb(172, 175, 174);
+    background-color: var(--secondary-color);
     border: 3px solid black;
     justify-content: space-evenly;
     align-items: center;
@@ -204,10 +213,10 @@ body{
 
 .flexBoxBiljetter .biljett1{
     display:flex;
-    background-color:#086788;
+    background-color:var(--accent-color);
     width: 230px;
     height: 360px;
-    border: 2px solid #06536d;
+    border: 2px solid #e4c65871;
     transition: 0.5s;
     flex-wrap:wrap;
     justify-content:center;
@@ -216,10 +225,10 @@ body{
 
 .flexBoxBiljetter .biljett2{
     display:flex;
-    background-color: #086788;
+    background-color: var(--accent-color);
     width: 230px;
     height: 360px;
-    border: 2px solid #06536d;
+    border: 2px solid #e4c65871;
     transition: 0.5s;
     flex-wrap:wrap;
     justify-content:center;
@@ -231,20 +240,22 @@ body{
     font-size: 15px; 
     cursor:pointer;
     align-self:flex-end;
-    background-color: #086788;
+    background:none;
     border:0;
     font-weight: bold;
     margin-bottom: 10px;
+    transition:0.2s;
 }
 
 .flexBoxBiljetter .biljett2 button{
     font-size: 15px; 
     cursor:pointer;
     align-self:flex-end;
-    background-color: #086788;
+    background:none;
     border:0;
     font-weight: bold;
     margin-bottom: 10px;
+    transition:0.2s;
 }
 
 .flexBoxBiljetter .biljett1 button:hover{
@@ -279,7 +290,7 @@ body{
 
 .indexM{
     grid-area: main;
-    background-image:linear-gradient(rgb(86, 92, 95), rgb(70, 73, 75))
+    background-color:var(--primary-color)
 }
 
 .biljetterM h1{
@@ -288,6 +299,7 @@ body{
     font-size: 50px;
     font-family: moonKids;
     text-decoration:underline;
+    color:#d3d4d4
 }
 
 
@@ -296,8 +308,7 @@ body{
     grid-column-end: 11;
     grid-row-start: 1;
     grid-row-end: 1;
-    background-color: #DD1C1A;
-    background-image: linear-gradient(to right, #c42826,  #DD1C1A, #DD1C1A, #DD1C1A);
+    background-color: var(--accent-color3);
     height: fit-content;
     width:fit-content;
     border-radius:20px;
@@ -337,7 +348,7 @@ body{
 }
 
 .navbarindex a:hover{
-    background-color: #ad1816;
+    background-color: var(--accent-color2);
 }
 
 .navbarBiljetter{
@@ -345,8 +356,7 @@ body{
     grid-column-end: 7;
     grid-row-start: 1;
     grid-row-end: 1;
-    background-color: #DD1C1A;
-    background-image: linear-gradient(to right, #c42826,  #DD1C1A, #DD1C1A, #DD1C1A);
+    background-color: var(--accent-color3);
     height: fit-content;
     width: fit-content;
     border-radius: 20px;
@@ -377,7 +387,7 @@ body{
 }
 
 .navbarBiljetter a:hover{
-    background-color: #ad1816;
+    background-color: var(--accent-color2);
 }
 
 .dividerBiljetter{
@@ -402,13 +412,13 @@ body{
 
 .Vlad{
     display:flex;
-    border: 1px solid black;
+    border: 1px solid var(--accent-color2);
     height: 350px;
     width: 265px;
     margin: 15px;
     margin-top: 4px;
     flex-wrap:wrap;
-    transition:0.1s;
+    transition:0.2s;
 }
 
 .Vlad img{
@@ -423,7 +433,7 @@ body{
 
 .Vlad .flex{
     display:flex;
-    background-color:white;
+    background-color:var(--accent-color2);
     width:inherit;
     height:12%;
     text-align:center;
@@ -439,13 +449,13 @@ body{
 
 .Noah{
     display:flex;
-    border: 1px solid black;
+    border: 1px solid var(--accent-color);
     height: 350px;
     width: 265px;
     margin: 15px;
     margin-top: 4px;
     flex-wrap:wrap;
-    transition:0.1s;
+    transition:0.2s;
 }
 
 .Noah:hover{
@@ -455,7 +465,7 @@ body{
 
 .Noah .flex{
     display:flex;
-    background-color:white;
+    background-color:var(--accent-color);
     width:inherit;
     height:12%;
     text-align:center;
@@ -476,13 +486,13 @@ body{
 
 .Casper{
     display:flex;
-    border: 1px solid black;
+    border: 1px solid var(--accent-color3);
     height: 350px;
     width: 265px;
     margin: 15px;
     margin-top: 4px;
     flex-wrap:wrap;
-    transition:0.1s;
+    transition:0.2s;
 }
 
 .Casper:hover{
@@ -492,7 +502,7 @@ body{
 
 .Casper .flex{
     display:flex;
-    background-color:white;
+    background-color:var(--accent-color3);
     width:inherit;
     height:12%;
     align-self:end;
@@ -514,13 +524,13 @@ body{
 
 .Anton{
     display:flex;
-    border: 1px solid black;
+    border: 1px solid var(--accent-color3);
     height: 350px;
     width: 265px;
     margin: 15px;
     margin-top: 4px;
     flex-wrap:wrap;
-    transition:0.1s;
+    transition:0.2s;
 }
 
 .Anton:hover{
@@ -530,7 +540,7 @@ body{
 
 .Anton .flex{
     display:flex;
-    background-color:white;
+    background-color:var(--accent-color3);
     width:inherit;
     height:12%;
     text-align:center;
@@ -551,13 +561,13 @@ body{
 
 .Oskar{
     display:flex;
-    border: 1px solid black;
+    border: 1px solid var(--accent-color);
     height: 350px;
     width: 265px;
     margin: 15px;
     margin-top: 4px;
     flex-wrap:wrap;
-    transition:0.1s;
+    transition:0.2s;
 }
 
 
@@ -573,7 +583,7 @@ body{
 
 .Oskar .flex{
     display:flex;
-    background-color:white;
+    background-color:var(--accent-color);
     width:inherit;
     height:12%;
     text-align:center;
@@ -590,7 +600,7 @@ body{
 .feet{
     grid-area:footer;
     display:grid;
-    background-color:#252b2b;
+    background-color:var(--secondary-color2);
     min-height:200px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 100%;
