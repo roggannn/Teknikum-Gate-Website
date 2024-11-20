@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeknikumGate - LAN traditionen från års tillbaka</title>
+    <title>Teknikum Gate - LAN traditionen från års tillbaka</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="Resources/Pictures/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="Resources/Pictures/favicon-16x16.png" sizes="16x16" />    
 </head>
 <body>
+    
     <div class="biljetterContent">
         <header class="biljetterH">
                 <h1>Teknikum Gate</h1>
         </header>
-        <nav class="navbarBiljetter">
+        <nav class="navbarindexM">
             <ul>
                 <li><a href="index.html">Hem</a></li>
                 <li><a href="index.html">Tävlingar</a></li>
                 <li><a href="index.html">Frågor & Svar</a></li>
-                <li><a href="biljetter.html">Biljetter</a></li>
+                <li><a href="biljetter.html" class="BiljetterNav">Biljetter</a></li>
                 <li><a href="personal.html">Personal</a></li>
             </ul>
         </nav>
@@ -36,6 +37,23 @@
                 <button id="StandardKnapp" type="button">Kolla lediga platser</button>
             </div>
         </div>
+        <footer class="feet">
+            <div class="sponsorer">
+                <img src="Resources/Pictures/preem.png" alt="Logo av Preem" class="preem">
+            </div>
+            <div class="kontakt">
+                <h1 class="Mailen">
+                    Mail: teknikumgate@gmail.com
+                </h1>
+            </div>
+            <div class="socialamedier">
+                
+            </div>
+            <div class="logo">
+    
+            </div>
+        </footer>
+
         <div class="flexBoxPlatser" id="standardPlatser">
             <div class="plats1" class="platsBox"></div>
             <div class="plats2" class="platsBox"></div>
@@ -88,8 +106,9 @@
             <div class="plats49" class="platsBox"></div>
             <div class="plats50" class="platsBox"></div>
         </div>
+        <script src="visaStandardPlatser.js"></script>
         <p class="OBS">OBS: Platsen är bekräftad först efter du har fått ett mail med din biljett.</p>
     </div>
-    <script src="visaStandardPlatser.js"></script>
+    
 </body>
 </html>
