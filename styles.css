@@ -8,6 +8,7 @@
     --accent-color:#f4d35e;
     --accent-color2:#ee964b;
     --accent-color3:#f95738;
+    --platssize:4px;
 }
 
 
@@ -20,10 +21,13 @@
     grid-auto-rows: minmax(60px, auto);
     border:0;
     gap:0;
+    position:absolute;
     
 
     grid-template-areas:
     "header header header header header header header header header header"
+    "main main main main main main main main main main"
+    "main main main main main main main main main main"
     "main main main main main main main main main main"
     "main main main main main main main main main main"
     "main main main main main main main main main main"
@@ -167,16 +171,19 @@ body{
 .IntroduktionBox{
     background-color: var(--accent-color3);
     grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 4;
-    grid-row-end: 11;
+    grid-column-end: 9;
+    grid-row-start: 10;
+    grid-row-end: 12;
     text-align: center;
     border: 2px solid black;
+    border-radius:20px;
 }
 
-.IntroduktionBox .Huvud{
-    font-size: 30px;
+.Huvud{
+    font-size: 70px;
     font-weight: bold;
+    text-align:center;
+    opacity:30%;
 }
 
 .IntroduktionBox .tes{
@@ -329,7 +336,8 @@ body{
 
 .indexM{
     grid-area: main;
-    background-color:var(--primary-color)
+    background-color:var(--primary-color);
+    height:1000px;
 }
 
 .biljetterM h1{
@@ -717,6 +725,7 @@ body{
 .flexBoxPlatser .plats1{
     grid-area:plats1;
     background-color: #088853;
+    margin-top:var(--platssize);
     border:1px solid black;
     width: 40px;
     height: 40px;
@@ -725,7 +734,7 @@ body{
 .flexBoxPlatser .plats2{
     grid-area:plats2;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -734,7 +743,7 @@ body{
 .flexBoxPlatser .plats3{
     grid-area:plats3;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -743,7 +752,7 @@ body{
 .flexBoxPlatser .plats4{
     grid-area:plats4;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -752,7 +761,7 @@ body{
 .flexBoxPlatser .plats5{
     grid-area:plats5;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -761,7 +770,7 @@ body{
 .flexBoxPlatser .plats6{
     grid-area:plats6;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -770,7 +779,7 @@ body{
 .flexBoxPlatser .plats7{
     grid-area:plats7;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -779,7 +788,7 @@ body{
 .flexBoxPlatser .plats8{
     grid-area:plats8;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -788,7 +797,7 @@ body{
 .flexBoxPlatser .plats9{
     grid-area:plats9;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -797,7 +806,7 @@ body{
 .flexBoxPlatser .plats10{
     grid-area:plats10;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -806,7 +815,7 @@ body{
 .flexBoxPlatser .plats11{
     grid-area:plats11;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -815,7 +824,7 @@ body{
 .flexBoxPlatser .plats12{
     grid-area:plats12;
     background-color: #088853;   
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -824,7 +833,7 @@ body{
 .flexBoxPlatser .plats13{
     grid-area:plats13;
     background-color: #088853;   
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -833,7 +842,7 @@ body{
 .flexBoxPlatser .plats14{
     grid-area:plats14;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -842,7 +851,7 @@ body{
 .flexBoxPlatser .plats15{
     grid-area:plats15;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -851,7 +860,7 @@ body{
 .flexBoxPlatser .plats16{
     grid-area:plats16;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -860,7 +869,7 @@ body{
 .flexBoxPlatser .plats17{
     grid-area:plats17;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -869,7 +878,7 @@ body{
 .flexBoxPlatser .plats18{
     grid-area:plats18;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -878,7 +887,7 @@ body{
 .flexBoxPlatser .plats19{
     grid-area:plats19;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -887,7 +896,7 @@ body{
 .flexBoxPlatser .plats20{
     grid-area:plats20;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -896,7 +905,7 @@ body{
 .flexBoxPlatser .plats21{
     grid-area:plats21;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -905,7 +914,7 @@ body{
 .flexBoxPlatser .plats22{
     grid-area:plats22;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -914,7 +923,7 @@ body{
 .flexBoxPlatser .plats23{
     grid-area:plats23;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -923,7 +932,7 @@ body{
 .flexBoxPlatser .plats24{
     grid-area:plats24;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -932,7 +941,7 @@ body{
 .flexBoxPlatser .plats25{
     grid-area:plats25;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     border:1px solid black;
@@ -952,7 +961,7 @@ body{
 .flexBoxPlatser .plats27{
     grid-area:plats27;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -962,7 +971,7 @@ body{
 .flexBoxPlatser .plats28{
     grid-area:plats28;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -972,7 +981,7 @@ body{
 .flexBoxPlatser .plats29{
     grid-area:plats29;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -982,7 +991,7 @@ body{
 .flexBoxPlatser .plats30{
     grid-area:plats30;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -992,7 +1001,7 @@ body{
 .flexBoxPlatser .plats31{
     grid-area:plats31;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1002,7 +1011,7 @@ body{
 .flexBoxPlatser .plats32{
     grid-area:plats32;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1012,7 +1021,7 @@ body{
 .flexBoxPlatser .plats33{
     grid-area:plats33;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1022,7 +1031,7 @@ body{
 .flexBoxPlatser .plats34{
     grid-area:plats34;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1032,7 +1041,7 @@ body{
 .flexBoxPlatser .plats35{
     grid-area:plats35;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1042,7 +1051,7 @@ body{
 .flexBoxPlatser .plats36{
     grid-area:plats36;
     background-color: #088853;
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1052,7 +1061,7 @@ body{
 .flexBoxPlatser .plats37{
     grid-area:plats37;
     background-color: #088853;   
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1062,7 +1071,7 @@ body{
 .flexBoxPlatser .plats38{
     grid-area:plats38;
     background-color: #088853;   
-    margin-left:1px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1072,7 +1081,7 @@ body{
 .flexBoxPlatser .plats39{
     grid-area:plats39;
     background-color: #088853;
-    margin:4px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1082,7 +1091,7 @@ body{
 .flexBoxPlatser .plats40{
     grid-area:plats40;
     background-color: #088853;
-    margin:4px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1092,7 +1101,7 @@ body{
 .flexBoxPlatser .plats41{
     grid-area:plats41;
     background-color: #088853;
-    margin:4px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1102,7 +1111,7 @@ body{
 .flexBoxPlatser .plats42{
     grid-area:plats42;
     background-color: #088853;
-    margin:4px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1112,7 +1121,7 @@ body{
 .flexBoxPlatser .plats43{
     grid-area:plats43;
     background-color: #088853;
-    margin:4px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1122,7 +1131,7 @@ body{
 .flexBoxPlatser .plats44{
     grid-area:plats44;
     background-color: #088853;
-    margin:4px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1132,7 +1141,7 @@ body{
 .flexBoxPlatser .plats45{
     grid-area:plats45;
     background-color: #088853;
-    margin:4px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1142,7 +1151,7 @@ body{
 .flexBoxPlatser .plats46{
     grid-area:plats46;
     background-color: #088853;
-    margin:4px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1152,7 +1161,7 @@ body{
 .flexBoxPlatser .plats47{
     grid-area:plats47;
     background-color: #088853;
-    margin:4px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1162,7 +1171,7 @@ body{
 .flexBoxPlatser .plats48{
     grid-area:plats48;
     background-color: #088853;
-    margin:4px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1172,7 +1181,7 @@ body{
 .flexBoxPlatser .plats49{
     grid-area:plats49;
     background-color: #088853;
-    margin:4px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
@@ -1182,7 +1191,7 @@ body{
 .flexBoxPlatser .plats50{
     grid-area:plats50;
     background-color: #088853;
-    margin:4px;
+    margin:var(--platssize);
     width: 40px;
     height: 40px;
     margin-top:5px;
