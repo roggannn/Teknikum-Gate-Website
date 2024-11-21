@@ -183,7 +183,19 @@ body{
     font-size: 70px;
     font-weight: bold;
     text-align:center;
-    opacity:30%;
+    color:var(--secondary-color);
+
+}
+
+.indexM img{
+    opacity:45%;
+    position:absolute;
+    width:80vw;
+    height:400px;
+    left: 50%;
+    transform:translate(-50%, 0);
+    top:90px;
+    border-radius:20px;
 }
 
 .IntroduktionBox .tes{
