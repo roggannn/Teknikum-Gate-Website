@@ -175,12 +175,12 @@ body{
 
 .IntroduktionBox{
     background-color: var(--accent-color3);
-    grid-column-start: 2;
-    grid-column-end: 7;
-    grid-row-start: 10;
+    grid-column-start: 4;
+    grid-column-end: 8;
+    grid-row-start: 8;
     grid-row-end: 12;
     text-align: center;
-    border: 2px solid black;
+    box-shadow:black 2px 5px 15px;
     border-radius:20px;
 }
 
@@ -202,15 +202,18 @@ body{
     left: 50%;
     transform:translate(-50%, 0);
     top:60px;
-    border-radius:20px;
     z-index:0;
+    -webkit-mask: linear-gradient(360deg, transparent 0%, #380A46 100%) 0% 0% no-repeat padding-box;
+           -mask: linear-gradient(360deg, transparent 0%, #380A46 100%) 0% 0% no-repeat padding-box;
 }
 
 .Huvud{
     font-size: 60px;
     font-weight: bold;
     text-align:center;
+    font-family: myFirstFont;
     color:var(--secondary-color);
+    text-shadow:var(--accent-color2) 0px 0px 5px;
     z-index:1;
     position:absolute;
     left: 50%;
@@ -218,11 +221,26 @@ body{
     opacity:80%;
 }
 
+.dividerIndex{
+    width:60vw;
+    height:2px;
+    z-index:1;
+    position:absolute;
+    left:50%;
+    transform:translate(-50%, 0);
+    top:550px;
+    background: linear-gradient(90deg, #886a0800 0%, var(--accent-color3) 15%, var(--accent-color3) 85%, #886a0800 100%);
+}
 
-
-.IntroduktionBox .tes{
+.tes{
     font-size: 20px;
     font-weight: bold;
+    color:var(--secondary-color);
+    text-shadow:var(--accent-color2) 0px 0px 5px;
+    position:absolute;
+    left:50%;
+    transform:translate(-50%, 0);
+    top:480px;
 }
 
 .biljetterM{
