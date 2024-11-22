@@ -181,7 +181,7 @@ body{
 
 .Intro2{
     display:flexbox;
-
+    position:absolute;
 }
 
 .Intro2 a{
@@ -190,13 +190,13 @@ body{
 }
 
 .indexM img{
-    opacity:45%;
+    opacity:20%;
     position:absolute;
-    width:80vw;
-    height:400px;
+    width:99.5vw;
+    height:500px;
     left: 50%;
     transform:translate(-50%, 0);
-    top:90px;
+    top:60px;
     border-radius:20px;
     z-index:0;
 }
@@ -235,14 +235,15 @@ body{
     height:60px;
 }
 
-.biljetterH h1{
+.biljetterH a{
     margin:0;
     text-align: left;
-    text-indent:20px;
+    margin-left:20px;
     color:var(--accent-color2);
     font-family: myFirstFont;
     font-size: 50px;
     text-shadow: 3px 2px black;
+    text-decoration: none;
 }
 
 .fragorH h1{
@@ -265,14 +266,15 @@ body{
     src: url(Resources/Fonts/Moonkids.otf);
   }
 
-.indexH h1{
+.indexH a{
     margin:0;
     text-align: left;
-    text-indent:20px;
+    margin-left:20px;
     color:var(--accent-color2);
     font-family: myFirstFont;
     font-size: 50px;
     text-shadow: 3px 2px black;
+    text-decoration: none;
 }
 
 .flexBoxBiljetter{
@@ -486,7 +488,6 @@ body{
     grid-column-end: 9;
     grid-row-start: 4;
     grid-row-end: 9;
-    border: 3px solid black;
 }
 
 .Vlad{
