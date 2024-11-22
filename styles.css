@@ -246,13 +246,14 @@ body{
     text-decoration: none;
 }
 
-.fragorH h1{
+.fragorH a{
     margin:0;
     text-align: left;
-    text-indent:20px;
+    margin-left:20px;
     color:var(--accent-color2);
     font-family: myFirstFont;
     font-size: 50px;
+    text-decoration: none;
     text-shadow: 3px 2px black;
 }
 
