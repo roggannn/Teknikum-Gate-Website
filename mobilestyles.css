@@ -1,3 +1,8 @@
 @media (pointer:coarse){
-    
+    .content{
+        visibility:hidden;
+    }
+    #Mobilförbud{
+        visibility:visible;
+    }
 }
