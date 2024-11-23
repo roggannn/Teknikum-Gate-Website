@@ -1347,6 +1347,17 @@ body{
     grid-column:3 / 8;
     grid-row: 12 / 12;
     font-weight: bolder;
+    color:var(--secondary-color);
+}
+
+.OBS_OBS{
+    z-index:2;
+    grid-column:3/5;
+    grid-row: 8 / 10;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: aliceblue;
+    
 }
 
 .fragorM{
