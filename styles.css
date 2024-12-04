@@ -82,6 +82,22 @@
     "mainB mainB mainB mainB mainB mainB"
     "mainB mainB mainB mainB mainB mainB"
     "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
+    "mainB mainB mainB mainB mainB mainB"
     "footer footer footer footer footer footer";
 }
 
@@ -344,7 +360,7 @@ body{
     background-color:var(--accent-color2);
     width: 260px;
     height: 380px;
-    border: 2px solid #e4c65871;
+    border-radius:3px;
     transition: 0.5s;
     box-shadow:2px 3px 3px rgb(103, 104, 103);
 }
@@ -360,7 +376,7 @@ body{
     background-color:var(--accent-color2);
     width: 260px;
     height: 380px;
-    border: 2px solid #e4c65871;
+    border-radius:3px;
     transition: 0.5s;
     box-shadow:2px 3px 3px rgb(103, 104, 103);
 }
@@ -1311,12 +1327,7 @@ body{
 }
 
 .OBS_OBS{
-    /*Hej*/
-}
-
-.BiljettKnapp{
-    margin-top:20px;
-    grid-area: 13 / 3 / 13 / 5;
+    display:none;
 }
 
 .fragorM{
@@ -1325,3 +1336,83 @@ body{
     height:1000px;
 }
 
+.beställning{
+    grid-row-start:18;
+    grid-column-start:2;
+    grid-column-end:4;
+    display:grid;
+    background-color: var(--secondary-color2);
+    grid-template-columns:1fr;
+    grid-template-rows: minmax(30px, auto);
+    border-radius:50px;
+    margin-right:20px;
+
+    grid-template-areas:
+    "rubrik"
+    "biljetter1"
+    "biljetter2";
+}
+
+.beställning h1{
+    grid-area: rubrik;
+    text-align:center;
+    height:fit-content;
+}
+
+.VIPräknare{
+    margin:10px;
+    grid-area: biljetter1;
+    justify-self:left;
+    margin-top:50px;
+}
+
+.VIPräknare button{
+    border-radius:50%;
+    height:30px;
+    width:30px;
+    position:relative;
+    bottom:2px;
+    margin:10px;
+    transition:0.2s;
+}
+
+.VIPräknare button:hover{
+    cursor:pointer;
+    background-color:gray;
+}
+
+
+.VIPräknare label{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.Standardräknare{
+    margin:10px;
+    grid-area: biljetter2;
+    justify-self:left;
+    height:60px;
+    margin-top:10px;
+    margin-bottom:100px;
+}
+
+.Standardräknare button{
+    border-radius:50%;
+    height:30px;
+    width:30px;
+    position:relative;
+    bottom:2px;
+    margin:10px;
+    transition:0.2s;
+}
+
+
+.Standardräknare button:hover{
+    cursor: pointer;
+    background-color:gray;
+}
+
+.Standardräknare label{
+    font-size:30px;
+    font-weight: bold;
+}
