@@ -84,20 +84,26 @@
         <div class="beställning">
             <h1>Välj antal biljetter</h1>
             <div class="VIPräknare">
-                <label class="VIP">VIP Biljett - </label>
-                <button class="minus" onclick="minus()">-</button>
-                <label id="antalLabel">0</label>
-                <button class="plus" onclick="plus()">+</button>
+                <label class="VIP">VIP Biljett</label>
+                <div class="vipButtons">
+                    <button class="button" onclick="minus(); prisförändring();">-</button>
+                    <label class="antalLabel" id="antalLabel">0</label>
+                    <button class="button" onclick="plus(); prisförändring();">+</button>
+                </div>
             </div>
             <script src="vipräknare.js"></script>
 
             <div class="Standardräknare">
-                <label class="VIP">Standard Biljett - </label>
-                <button class="minus2" onclick="minus2()">-</button>
-                <label id="antalLabel2">0</label>
-                <button class="plus2" onclick="plus2()">+</button>
+                <label class="VIP">Standard Biljett</label>
+                <div class="standardButtons">
+                    <button class="button2" onclick="minus2(); prisförändring();">-</button>
+                    <label class="antalLabel2" id="antalLabel2">0</label>
+                    <button class="button2" onclick="plus2(); prisförändring();">+</button>
+                </div>
             </div>
             <script src="standardräknare.js"></script>
+            <label id="priset" class="priset">Det kostar: 0 kr</label>
+            <script src="prisberäkning.js"></script>
         </div>
 
 
