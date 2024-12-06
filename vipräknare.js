@@ -1,7 +1,7 @@
 let value = 0;
 
 function plus() {
-    if (value < 10) {
+    if (value < 5) {
         value++;
         document.getElementById("antalLabel").textContent = value;
     }

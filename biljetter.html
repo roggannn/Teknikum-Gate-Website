@@ -91,20 +91,81 @@
                     <button class="button" onclick="plus(); prisförändring();">+</button>
                 </div>
             </div>
+
             <script src="vipräknare.js"></script>
 
             <div class="Standardräknare">
                 <label class="VIP">Standard Biljett</label>
                 <div class="standardButtons">
-                    <button class="button2" onclick="minus2(); prisförändring();">-</button>
+                    <button class="button2" onclick="minus2(); prisförändring(); minus22();">-</button>
                     <label class="antalLabel2" id="antalLabel2">0</label>
-                    <button class="button2" onclick="plus2(); prisförändring();">+</button>
+                    <button class="button2" onclick="plus2(); prisförändring(); plus22();">+</button>
                 </div>
             </div>
+
             <script src="standardräknare.js"></script>
+
             <label id="priset" class="priset">Det kostar: 0 kr</label>
+
             <script src="prisberäkning.js"></script>
         </div>
+
+        <div class="bordPlacering">
+            <div class="row">
+                <div class="seat" data-id="1"></div>
+                <div class="seat" data-id="2"></div>
+                <div class="seat" data-id="3"></div>
+                <div class="seat" data-id="4"></div>
+                <div class="seat" data-id="5"></div>
+                <div class="seat" data-id="6"></div>
+                <div class="seat" data-id="7"></div>
+                <div class="seat" data-id="8"></div>
+                <div class="seat" data-id="9"></div>
+                <div class="seat" data-id="10"></div>
+                <div class="seat" data-id="11"></div>
+                <div class="seat" data-id="12"></div>
+                <div class="seat" data-id="13"></div>
+                <div class="seat" data-id="14"></div>
+                <div class="seat" data-id="15"></div>
+              </div>
+              <div class="row">
+                <div class="seat" data-id="16"></div>
+                <div class="seat" data-id="17"></div>
+                <div class="seat" data-id="18"></div>
+                <div class="seat" data-id="19"></div>
+                <div class="seat" data-id="20"></div>
+                <div class="seat" data-id="21"></div>
+                <div class="seat" data-id="22"></div>
+                <div class="seat" data-id="23"></div>
+                <div class="seat" data-id="24"></div>
+                <div class="seat" data-id="25"></div>
+                <div class="seat" data-id="26"></div>
+                <div class="seat" data-id="27"></div>
+                <div class="seat" data-id="28"></div>
+                <div class="seat" data-id="29"></div>
+                <div class="seat" data-id="30"></div>
+              </div>
+              <div class="row">
+                <div class="seat booked" data-id="31"></div>
+                <div class="seat" data-id="32"></div>
+                <div class="seat" data-id="33"></div>
+                <div class="seat" data-id="34"></div>
+                <div class="seat" data-id="35"></div>
+                <div class="seat" data-id="36"></div>
+                <div class="seat" data-id="37"></div>
+                <div class="seat" data-id="38"></div>
+                <div class="seat" data-id="39"></div>
+                <div class="seat" data-id="40"></div>
+                <div class="seat" data-id="41"></div>
+                <div class="seat" data-id="42"></div>
+                <div class="seat" data-id="43"></div>
+                <div class="seat" data-id="44"></div>
+                <div class="seat" data-id="45"></div>
+              </div>
+        </div>
+
+        <div id="seatSelectionLabel">Valda platser: Inga</div>
+        <script src="platser.js"></script>
 
 
         <footer class="feet">
