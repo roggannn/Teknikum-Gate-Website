@@ -5,125 +5,97 @@ const seatSelectionLabel = document.getElementById('seatSelectionLabel');
 let ticketsToBuy = 0;
 
 function selectSeats(ticketCount) {
+    // Reset all seat selections
     seats.forEach(seat => seat.classList.remove('selected'));
 
     let selectedSeats = 0;
-    let selectedRows = [];
 
+    // Iterate through the seats and select the first `ticketCount` available ones
     for (let i = 0; i < seats.length; i++) {
-
-        if (seats[i].classList.contains('booked')) continue;
-
-        if (selectedSeats < ticketCount) {
+        if (!seats[i].classList.contains('booked') && selectedSeats < ticketCount) {
             seats[i].classList.add('selected');
             selectedSeats++;
-
-            const row = getSeatRow(i);
-            if (!selectedRows.includes(row)) {
-            selectedRows.push(row);
-            }
         }
     }
 
-    updateSeatLabel(selectedSeats, selectedRows);
+    // Update the label to display the selected seat numbers
+    updateSeatLabel();
 }
 
 function adjustSelection(clickedSeatIndex, ticketCount) {
-    ticketCount = Math.max(1, Math.min(ticketCount, 5));
+    ticketCount = Math.max(1, Math.min(ticketCount, 5)); // Clamp ticketCount to range [1, 5]
 
-    let startIndex = clickedSeatIndex - Math.floor(ticketCount / 2);
-
-    if (startIndex < 0) startIndex = 0;
+    // Start selecting from the clicked seat and spread out
+    let startIndex = Math.max(0, clickedSeatIndex - Math.floor(ticketCount / 2));
+    let endIndex = Math.min(seats.length, startIndex + ticketCount);
 
     let selectedSeats = 0;
-    let selectedRows = [];
 
+    // Reset all selections
     seats.forEach(seat => seat.classList.remove('selected'));
 
-    for (let i = startIndex; i < seats.length; i++) {
-
-        if (seats[i].classList.contains('booked')) continue;
-
-        if (selectedSeats < ticketCount) {
+    // Select seats within the range
+    for (let i = startIndex; i < endIndex; i++) {
+        if (!seats[i].classList.contains('booked') && selectedSeats < ticketCount) {
             seats[i].classList.add('selected');
             selectedSeats++;
-
-            const row = getSeatRow(i);
-            if (!selectedRows.includes(row)) {
-                selectedRows.push(row);
-            }
-        } else {
-            break;
         }
     }
 
-    updateSeatLabel(selectedSeats, selectedRows);
+    // Update the label with the selected seats
+    updateSeatLabel();
 }
 
 function previewSelection(clickedSeatIndex, ticketCount) {
     ticketCount = Math.max(1, Math.min(ticketCount, 5));
 
-    let startIndex = clickedSeatIndex - Math.floor(ticketCount / 2);
-
-    if (startIndex < 0) startIndex = 0;
-
-    let selectedSeats = 0;
-    let selectedRows = [];
+    let startIndex = Math.max(0, clickedSeatIndex - Math.floor(ticketCount / 2));
+    let endIndex = Math.min(seats.length, startIndex + ticketCount);
 
     seats.forEach(seat => seat.classList.remove('preview'));
 
-    for (let i = startIndex; i < seats.length; i++) {
+    let selectedSeats = 0;
 
-        if (seats[i].classList.contains('booked')) continue;
-
-        if (selectedSeats < ticketCount) {
+    for (let i = startIndex; i < endIndex && selectedSeats < ticketCount; i++) {
+        if (!seats[i].classList.contains('booked')) {
             seats[i].classList.add('preview');
             selectedSeats++;
-            const row = getSeatRow(i);
-            if (!selectedRows.includes(row)) {
-                selectedRows.push(row);
-            }
-        } else {
-            break;
         }
     }
-
-    updateSeatLabel(selectedSeats, selectedRows);
 }
 
-function updateSeatLabel(selectedSeats, selectedRows) {
+function updateSeatLabel() {
     const seatNumbers = [];
-    const rowNumbers = [];
 
-    if (startIndex === undefined || ticketCount === undefined) {
-        for (let i= 0; i < seats.length; i++) {
-            if (seats[i].classList.contains('selected')) {
-                seatNumbers.push(i + 1);
-            }
+    // Collect seat numbers for all selected seats
+    seats.forEach((seat, index) => {
+        if (seat.classList.contains('selected')) {
+            seatNumbers.push(index + 1); // Convert 0-based index to 1-based seat number
         }
-    } else {
-        for (let i = startIndex; i < startIndex + ticketCount; i++) {
-            if (i < seats.length && !seats[i].classList.contains('booked')) {
-                seatNumbers.push(i + 1);
-            }
-        }
-    }
+    });
 
-    
-    
-    seatSelectionLabel.textContent = `Valda platser: ${seatNumbers.join(', ')}`;
-    
+    // Update the label with seat numbers
+    seatSelectionLabel.textContent = seatNumbers.length > 0
+        ? `Valda platser: ${seatNumbers.join(', ')}`
+        : 'Inga platser valda';
 }
 
 seats.forEach((seat, index) => {
     seat.addEventListener('click', () => {
+        // Prevent selection if ticketsToBuy is 0
+        if (ticketsToBuy <= 0) {
+            seatSelectionLabel.textContent = "Du behöver välja åtminstone 1 standard biljett!";
+            return;
+        }
+
+        // Only proceed if the seat is not booked
         if (!seat.classList.contains('booked')) {
             adjustSelection(index, ticketsToBuy);
         }
     });
 
     seat.addEventListener('mouseenter', () => {
-        if (!seat.classList.contains('booked')) {
+        if (ticketsToBuy > 0 && !seat.classList.contains('booked')) {
             previewSelection(index, ticketsToBuy);
         }
     });
@@ -134,13 +106,19 @@ seats.forEach((seat, index) => {
 });
 
 function plus22() {
+    // Increment the ticket count, clamping it to the maximum of 5
     ticketsToBuy = Math.min(ticketsToBuy + 1, 5);
     ticketCountLabel.innerText = ticketsToBuy;
+
+    // Automatically select the first available seats based on the ticket count
     selectSeats(ticketsToBuy);
 }
 
 function minus22() {
+    // Decrement the ticket count, clamping it to a minimum of 0
     ticketsToBuy = Math.max(ticketsToBuy - 1, 0);
     ticketCountLabel.innerText = ticketsToBuy;
+
+    // Automatically adjust the seat selection based on the new ticket count
     selectSeats(ticketsToBuy);
 }
