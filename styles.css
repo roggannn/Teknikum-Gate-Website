@@ -1498,6 +1498,22 @@ body{
     cursor: not-allowed;
 }
 
+.bordPlacering .seat.vip.booked {
+    background-color: rgb(177, 12, 12); /* Same as booked color */
+    position: relative;
+}
+
+.bordPlacering .seat.vip.booked::after {
+    content: '★'; /* Unicode star character */
+    color: gold; /* Gold star for VIP */
+    font-size: 16px; /* Adjust size */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
 #seatSelectionLabel{
     margin-top: 20px;
     font-size: 16px;
