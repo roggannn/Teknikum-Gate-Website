@@ -1499,14 +1499,14 @@ body{
 }
 
 .bordPlacering .seat.vip.booked {
-    background-color: rgb(177, 12, 12); /* Same as booked color */
+    background-color: rgb(177, 12, 12); 
     position: relative;
 }
 
 .bordPlacering .seat.vip.booked::after {
-    content: '★'; /* Unicode star character */
-    color: gold; /* Gold star for VIP */
-    font-size: 16px; /* Adjust size */
+    content: '★'; 
+    color: gold; 
+    font-size: 16px; 
     position: absolute;
     top: 50%;
     left: 50%;
