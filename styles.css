@@ -1469,13 +1469,13 @@ body{
 
 .bordPlacering .row{
     display: flex;
-    gap: 10px;
+    gap: 5px;
     
 }
 
 .bordPlacering .seat{
-    width:30px;
-    height:30px;
+    width:20px;
+    height:20px;
     background-color: #088853;
     border-radius: 5px;
     cursor: pointer;
@@ -1506,7 +1506,7 @@ body{
 .bordPlacering .seat.vip.booked::after {
     content: '★'; 
     color: gold; 
-    font-size: 16px; 
+    font-size: 12px; 
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1516,7 +1516,7 @@ body{
 
 #seatSelectionLabel{
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 12px;
     color: var(--accent-color);
     text-align: center;
     font-weight: bold;
