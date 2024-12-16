@@ -40,7 +40,7 @@
                         - Internet-lina på bra hastighet
                     </p>
                     <p>
-                        - 120cm plats
+                        - 90cm plats
                     </p>
                     <p>
                         - Tillgång till kiosk
@@ -72,7 +72,7 @@
                         - 1 Gratis mat/snack + dryck i kiosk varje dag
                     </p>
                     <p>
-                        - 180cm plats för sig själv
+                        - 120cm plats för sig själv
                     </p>
                     <p>
                         - Bättre stolar
@@ -162,10 +162,23 @@
         <div id="seatSelectionLabel">Valda platser: Inga</div>
         <script src="platser.js"></script>
 
+        <button id="payButton" onclick="showSwishQRCode()">Pay</button>
+
+        <div id="qrModal">
+            <h2>Scanna för att betala</h2>
+            <img src="Resources/Pictures/swish.jpg" alt="Swish QR Code">
+            <h3>OBS: Du bör skriva in de sittplatser du vill boka</h3>
+            <h4>De platser du har valt just nu är: </h4>
+            <button onclick="closeSwishQRCode()">Close</button>
+        </div>
+
+        <div id="modalOverlay" onclick="closeSwishQRCode()"></div>
 
         <footer class="feet">
             <div class="sponsorer">
-                <img src="Resources/Pictures/preem.png" alt="Logo av Preem" class="preem">
+                <a href="https://www.preem.com" class="preem">
+                    <img src="Resources/Pictures/preem.png" alt="Logo av Preem" class="preem">
+                </a>
             </div>
             <div class="kontakt">
                 <img src="Resources/Pictures/gmail.png" alt="Mail logo" class="LogoM">

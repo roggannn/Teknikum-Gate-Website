@@ -1465,6 +1465,7 @@ body{
     flex-direction: column;
     gap: 10px;
     padding:30px;
+    width:min-content;
 }
 
 .bordPlacering .row{
@@ -1525,3 +1526,90 @@ body{
     grid-column-end:5;
 }
 
+#payButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #088853;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 500;
+}
+
+#payButton:hover {
+    background-color: #0aa162;
+}
+
+#qrModal {
+    display: flex;
+    position: fixed;
+    flex-wrap:wrap;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    height:500px;
+    width:500px;
+    z-index: 1000;
+    text-align:center;
+}
+
+#qrModal h2 {
+ 
+    margin-bottom: 10px;
+}
+
+#qrModal h3 {
+
+    margin-bottom: 10px;
+}
+
+#qrModal h4 {
+  
+    margin-bottom: 30px;
+}
+
+#qrModal img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius:15px;
+    align-self:center;
+}
+
+#qrModal button {
+    background-color: #088853;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    width:75px;
+    height:min-content;
+    align-self:center;
+    justify-content: flex-end;
+}
+
+#qrModal button:hover {
+    background-color: #0aa162;
+}
+
+#modalOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}

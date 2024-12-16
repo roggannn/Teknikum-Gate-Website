@@ -59,6 +59,7 @@ function previewSelection(clickedSeatIndex, ticketCount) {
 }
 
 function updateSeatLabel() {
+    const selectedSeats = Array.from(seats).filter(seat => seat.classList.contains('selected'));
     const seatNumbers = [];
 
     
@@ -68,6 +69,12 @@ function updateSeatLabel() {
         }
     });
 
+    const payButton = document.getElementById('payButton');
+    if (selectedSeats.length > 0) {
+        payButton.style.display = 'block';
+    } else {
+        payButton.style.display = 'none';
+    }
     
     seatSelectionLabel.textContent = seatNumbers.length > 0
         ? `Valda platser: ${seatNumbers.join(', ')}`
@@ -112,4 +119,18 @@ function minus22() {
     ticketCountLabel.innerText = ticketsToBuy;
 
     selectSeats(ticketsToBuy);
+}
+
+function showSwishQRCode() {
+    const modal = document.getElementById('qrModal');
+    const overlay = document.getElementById('modalOverlay');
+    modal.style.display = 'block';
+    overlay.style.display = 'block';
+}
+
+function closeSwishQRCode() {
+    const modal = document.getElementById('qrModal');
+    const overlay = document.getElementById('modalOverlay');
+    modal.style.display = 'none';
+    overlay.style.display = 'none';
 }
