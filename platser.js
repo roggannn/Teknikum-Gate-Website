@@ -2,6 +2,13 @@ const seats = document.querySelectorAll('.seat');
 const ticketCountLabel = document.getElementById('antalLabel2');
 const seatSelectionLabel = document.getElementById('seatSelectionLabel');
 
+const payButton = document.getElementById('payButton');
+const modalOverlay = document.getElementById('modalOverlay');
+const swishModal = document.getElementById('swishModal');
+const agreementModal = document.getElementById('agreementModal');
+
+let agreementAccepted = false;
+
 let ticketsToBuy = 0;
 
 function selectSeats(ticketCount) {
@@ -121,16 +128,31 @@ function minus22() {
     selectSeats(ticketsToBuy);
 }
 
-function showSwishQRCode() {
-    const modal = document.getElementById('qrModal');
-    const overlay = document.getElementById('modalOverlay');
-    modal.style.display = 'block';
-    overlay.style.display = 'block';
+function showAgreementModal() {
+    modalOverlay.style.display = 'flex';
+    agreementModal.style.display = 'block';
+    swishModal.style.display = 'none';
 }
 
-function closeSwishQRCode() {
-    const modal = document.getElementById('qrModal');
-    const overlay = document.getElementById('modalOverlay');
-    modal.style.display = 'none';
-    overlay.style.display = 'none';
+function acceptAgreement() {
+    agreementAccepted = true;
+    agreementModal.style.display = 'none';
+    swishModal.style.display = 'block'; // Directly proceed to the Swish modal
 }
+
+function showSwishModal() {
+    if (!agreementAccepted) {
+        showAgreementModal(); // Show the agreement modal first
+    } else {
+        modalOverlay.style.display = 'flex';
+        swishModal.style.display = 'block';
+    }
+}
+
+function closeModal() {
+    modalOverlay.style.display = 'none';
+    swishModal.style.display = 'none';
+    agreementModal.style.display = 'none';
+}
+
+payButton.addEventListener('click', showSwishModal);

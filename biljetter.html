@@ -162,17 +162,28 @@
         <div id="seatSelectionLabel">Valda platser: Inga</div>
         <script src="platser.js"></script>
 
-        <button id="payButton" onclick="showSwishQRCode()">Pay</button>
+        <button id="payButton" >Betala</button>
 
-        <div id="qrModal">
-            <h2>Scanna för att betala</h2>
-            <img src="Resources/Pictures/swish.jpg" alt="Swish QR Code">
-            <h3>OBS: Du bör skriva in de sittplatser du vill boka</h3>
-            <h4>De platser du har valt just nu är: </h4>
-            <button onclick="closeSwishQRCode()">Close</button>
+        <div id="modalOverlay" style="display: none;">
+            <div id="swishModal" class="modal-content" style="display: none;">
+                <h2>Betalning via Swish</h2>
+                <p>Scanna QR koden nedan för att slutföra din betalning:</p>
+                <img src="Resources/Pictures/swish.jpg" alt="Swish QR Code">
+                <button class="close-modal">Stäng</button>
+            </div>
+        
+            
+            <div id="agreementModal" class="modal-content" style="display: none;">
+                <h2>Användarvillkor</h2>
+                <p>
+                    Detta är användarvillkoren. Genom att godkänna bekräftar du att du förstår och accepterar alla policyer som beskrivs i detta dokument.
+                </p>
+                <button id="acceptAgreement">Acceptera</button>
+                <button class="close-modal">Stäng</button>
+            </div>
+
+            <script src="modal.js"></script>
         </div>
-
-        <div id="modalOverlay" onclick="closeSwishQRCode()"></div>
 
         <footer class="feet">
             <div class="sponsorer">
