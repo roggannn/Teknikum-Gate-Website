@@ -1546,7 +1546,20 @@ body{
 }
 
 #swishModal{
-    
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+
+#swishModal h2{
+    font-size:30px;
+}
+
+#swishModal img{
+    width:30%;
+    height:30%;
+    align-self:center;
+    border-radius: 10px;
 }
 
 #modalOverlay {
@@ -1582,6 +1595,8 @@ body{
 .modal-content button.close-modal {
     background: red;
     color: white;
+    width:20%;
+    align-self:center;
 }
 
 .modal-content button.close-modal:hover {
@@ -1589,8 +1604,20 @@ body{
 }
 
 .modal-content button#acceptAgreement {
-    background: green;
+    background: rgb(49, 182, 49);
     color: white;
+    width:20%;
+    align-self:center;
+}
+
+.modal-content button#acceptAgreement:hover {
+    background: rgb(62, 143, 62);
+    
+}
+
+#agreementModal{
+    justify-content:center;
+    flex-direction: column;
 }
 
 .modal-content h2 {

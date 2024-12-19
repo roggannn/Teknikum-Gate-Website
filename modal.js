@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Show Agreement Modal
     function showAgreementModal() {
         modalOverlay.style.display = 'flex';
-        agreementModal.style.display = 'block';
+        agreementModal.style.display = 'flex';
         swishModal.style.display = 'none';
     }
 
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function acceptAgreement() {
         agreementAccepted = true;
         agreementModal.style.display = 'none';
-        swishModal.style.display = 'block';
+        swishModal.style.display = 'flex';
     }
 
     // Show Swish Modal (after agreement is accepted)
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showAgreementModal();
         } else {
             modalOverlay.style.display = 'flex';
-            swishModal.style.display = 'block';
+            swishModal.style.display = 'flex';
         }
     }
 
