@@ -119,6 +119,7 @@ function plus22() {
     ticketCountLabel.innerText = ticketsToBuy;
 
     selectSeats(ticketsToBuy);
+    updateSelectedSeatsDisplay();
 }
 
 function minus22() {
@@ -126,6 +127,7 @@ function minus22() {
     ticketCountLabel.innerText = ticketsToBuy;
 
     selectSeats(ticketsToBuy);
+    updateSelectedSeatsDisplay();
 }
 
 function showAgreementModal() {
@@ -154,5 +156,25 @@ function closeModal() {
     swishModal.style.display = 'none';
     agreementModal.style.display = 'none';
 }
+
+function updateSelectedSeatsDisplay() {
+    const selectedSeats = [];
+    seats.forEach((seat, index) => {
+        if (seat.classList.contains('selected')) {
+            selectedSeats.push(index + 1); // Adjust if seat numbering starts differently
+        }
+    });
+
+    const displayElement = document.getElementById('selectedSeatsDisplay');
+    if (selectedSeats.length > 0) {
+        displayElement.textContent = `Skriv in dina platser du bokar i swishen, dina platser är: ${selectedSeats.join(', ')}`;
+    } else {
+        displayElement.textContent = `Skriv in dina platser du bokar i swishen, dina platser är: Inga valda`;
+    }
+}
+
+seats.forEach((seat) => {
+    seat.addEventListener('click', updateSelectedSeatsDisplay);
+});
 
 payButton.addEventListener('click', showSwishModal);
