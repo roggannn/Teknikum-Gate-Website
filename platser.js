@@ -1,6 +1,8 @@
 const seats = document.querySelectorAll('.seat');
 const ticketCountLabel = document.getElementById('antalLabel2');
 const seatSelectionLabel = document.getElementById('seatSelectionLabel');
+const vipknapp1 = document.getElementById('vipKnapp1');
+const vipknapp2 = document.getElementById('vipKnapp2');
 
 const payButton = document.getElementById('payButton');
 const modalOverlay = document.getElementById('modalOverlay');
