@@ -1618,13 +1618,16 @@ body{
 #agreementModal{
     justify-content:center;
     flex-direction: column;
+    width:min-content;
+    min-width:60%;
+    height:70%;
 }
 
 .modal-content h2 {
     margin-bottom: 10px;
 }
 
-.modal-content p {
+.modal-content .Swishp {
     margin-bottom: 20px;
     text-align: left;
     max-height: 300px;
@@ -1638,4 +1641,16 @@ body{
 
 .modal-content button:hover {
     background-color: #0aa162;
+}
+
+.villkorDiv{
+    flex-direction: column;
+    height:100%;
+    width:100%;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+.villkorDiv p{
+    text-align:left;
 }
