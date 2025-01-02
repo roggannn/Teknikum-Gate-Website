@@ -1,6 +1,8 @@
-const seats = document.querySelectorAll('.seat');
-const ticketCountLabel = document.getElementById('antalLabel2');
+const vipseats = document.querySelectorAll('.vipseat');
+const ticketCountLabel2 = document.getElementById('antalLabel');
 const seatSelectionLabel = document.getElementById('seatSelectionLabel');
+const vipknapp1 = document.getElementById('vipKnapp1');
+const vipknapp2 = document.getElementById('vipKnapp2');
 
 const payButton = document.getElementById('payButton');
 const modalOverlay = document.getElementById('modalOverlay');
@@ -9,9 +11,9 @@ const agreementModal = document.getElementById('agreementModal');
 
 let agreementAccepted = false;
 
-let ticketsToBuy = 0;
+let vipticketsToBuy = 0;
 
-function selectSeats(ticketCount) {
+function selectVIPSeats(ticketCount) {
     seats.forEach(seat => seat.classList.remove('selected'));
 
     let selectedSeats = 0;
@@ -23,10 +25,10 @@ function selectSeats(ticketCount) {
         }
     }
 
-    updateSeatLabel();
+    updateSeatLabel2();
 }
 
-function adjustSelection(clickedSeatIndex, ticketCount) {
+function adjustSelection2(clickedSeatIndex, ticketCount) {
     ticketCount = Math.max(1, Math.min(ticketCount, 5)); 
 
     let startIndex = Math.max(0, clickedSeatIndex - Math.floor(ticketCount / 2));
@@ -44,10 +46,10 @@ function adjustSelection(clickedSeatIndex, ticketCount) {
     }
 
     
-    updateSeatLabel();
+    updateSeatLabel2();
 }
 
-function previewSelection(clickedSeatIndex, ticketCount) {
+function previewSelection2(clickedSeatIndex, ticketCount) {
     ticketCount = Math.max(1, Math.min(ticketCount, 5));
 
     let startIndex = Math.max(0, clickedSeatIndex - Math.floor(ticketCount / 2));
@@ -65,7 +67,7 @@ function previewSelection(clickedSeatIndex, ticketCount) {
     }
 }
 
-function updateSeatLabel() {
+function updateSeatLabel2() {
     const selectedSeats = Array.from(seats).filter(seat => seat.classList.contains('selected'));
     const seatNumbers = [];
 
@@ -84,9 +86,8 @@ function updateSeatLabel() {
     }
     
     seatSelectionLabel.textContent = seatNumbers.length > 0
-        ? `Standard platser valda: ${seatNumbers.join(', ')}`
-        : 'Inga standard platser valda';
-    updateSelectedSeatsDisplay();
+        ? `Vip platser valda: ${seatNumbers.join(', ')}`
+        : 'Inga vip platser valda';
 }
 
 seats.forEach((seat, index) => {
@@ -114,21 +115,21 @@ seats.forEach((seat, index) => {
     });
 });
 
-function plus22() {
+function plus1() {
     
     ticketsToBuy = Math.min(ticketsToBuy + 1, 5);
     ticketCountLabel.innerText = ticketsToBuy;
 
     selectSeats(ticketsToBuy);
-    updateSelectedSeatsDisplay();
+    updateSelectedSeatsDisplay2();
 }
 
-function minus22() {
+function minus1() {
     ticketsToBuy = Math.max(ticketsToBuy - 1, 0);
     ticketCountLabel.innerText = ticketsToBuy;
 
     selectSeats(ticketsToBuy);
-    updateSelectedSeatsDisplay();
+    updateSelectedSeatsDisplay2();
 }
 
 function showAgreementModal() {
@@ -158,7 +159,7 @@ function closeModal() {
     agreementModal.style.display = 'none';
 }
 
-function updateSelectedSeatsDisplay() {
+function updateSelectedSeatsDisplay2() {
     const selectedSeats = [];
     seats.forEach((seat, index) => {
         if (seat.classList.contains('selected')) {
@@ -166,22 +167,21 @@ function updateSelectedSeatsDisplay() {
         }
     });
 
-
     const displayElement = document.getElementById('selectedSeatsDisplay');
     let price = 0;
 
     if (selectedSeats.length > 0) {
-        displayElement.textContent = `Skriv in standard platserna du bokar i swishen, dina platser är: ${selectedSeats.join(', ')}`;
+        displayElement.textContent = `Skriv in vip platserna du bokar i swishen, dina platser är: ${selectedSeats.join(', ')}`;
         price = document.getElementById("antalLabel").textContent * 250 + document.getElementById("antalLabel2").textContent * 200 + " kr";
         document.getElementById('PrisBiljetter').textContent = "Det du ska betala är: " + price;
     } else {
-        displayElement.textContent = `Skriv in standard platserna du bokar i swishen, dina platser är: Inga valda`;
+        displayElement.textContent = `Skriv in vip platserna du bokar i swishen, dina platser är: Inga valda`;
         document.getElementById('PrisBiljetter').textContent = "";
     }
 }
 
 seats.forEach((seat) => {
-    seat.addEventListener('click', updateSelectedSeatsDisplay2);
+    seat.addEventListener('click', updateSelectedSeatsDisplay);
 });
 
 payButton.addEventListener('click', showSwishModal);

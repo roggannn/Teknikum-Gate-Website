@@ -86,9 +86,9 @@
             <div class="VIPräknare">
                 <label class="VIP">VIP Biljett</label>
                 <div class="vipButtons">
-                    <button id="vipKnapp1" class="button" onclick="minus(); prisförändring();">-</button>
+                    <button id="vipKnapp1" class="button" onclick="minus(); prisförändring(); minus1();">-</button>
                     <label class="antalLabel" id="antalLabel">0</label>
-                    <button id="vipKnapp2" class="button" onclick="plus(); prisförändring();">+</button>
+                    <button id="vipKnapp2" class="button" onclick="plus(); prisförändring(); plus1();">+</button>
                 </div>
             </div>
 
@@ -111,55 +111,63 @@
         </div>
 
         <div class="bordPlacering">
-            <div class="row">
-                <div class="seat" data-id="1"></div>
-                <div class="seat" data-id="2"></div>
-                <div class="seat" data-id="3"></div>
-                <div class="seat" data-id="4"></div>
-                <div class="seat" data-id="5"></div>
-                <div class="seat" data-id="6"></div>
-                <div class="seat" data-id="7"></div>
-                <div class="seat" data-id="8"></div>
-                <div class="seat" data-id="9"></div>
-                <div class="seat" data-id="10"></div>
-                <div class="seat" data-id="11"></div>
-                <div class="seat" data-id="12"></div>
-                <div class="seat" data-id="13"></div>
-                <div class="seat" data-id="14"></div>
-                <div class="seat" data-id="15"></div>
-                <div class="seat" data-id="16"></div>
-                <div class="seat" data-id="17"></div>
-                <div class="seat" data-id="18"></div>
-                <div class="seat" data-id="19"></div>
-                <div class="seat" data-id="20"></div>
-              </div>
-              <div class="row">
-                <div class="seat booked" data-id="21"></div>
-                <div class="seat" data-id="22"></div>
-                <div class="seat" data-id="23"></div>
-                <div class="seat" data-id="24"></div>
-                <div class="seat" data-id="25"></div>
-                <div class="seat" data-id="26"></div>
-                <div class="seat" data-id="27"></div>
-                <div class="seat" data-id="28"></div>
-                <div class="seat" data-id="29"></div>
-                <div class="seat" data-id="30"></div>
-                <div class="seat" data-id="31"></div>
-                <div class="seat" data-id="32"></div>
-                <div class="seat" data-id="33"></div>
-                <div class="seat" data-id="34"></div>
-                <div class="seat" data-id="35"></div>
-                <div class="seat" data-id="36"></div>
-                <div class="seat" data-id="37"></div>
-                <div class="seat" data-id="38"></div>
-                <div class="seat" data-id="39"></div>
-                <div class="seat" data-id="40"></div>
-                <div class="seat" data-id="41"></div>
-                <div class="seat" data-id="42"></div>
-              </div>
+            <div class="standardbiljetter">
+                <div class="row">
+                    <div class="seat" data-id="1"></div>
+                    <div class="seat" data-id="2"></div>
+                    <div class="seat" data-id="3"></div>
+                    <div class="seat" data-id="4"></div>
+                    <div class="seat" data-id="5"></div>
+                    <div class="seat" data-id="6"></div>
+                    <div class="seat" data-id="7"></div>
+                    <div class="seat" data-id="8"></div>
+                    <div class="seat" data-id="9"></div>
+                    <div class="seat" data-id="10"></div>
+                    <div class="seat" data-id="11"></div>
+                    <div class="seat" data-id="12"></div>
+                    <div class="seat" data-id="13"></div>
+                    <div class="seat" data-id="14"></div>
+                    <div class="seat" data-id="15"></div>
+                    <div class="seat" data-id="16"></div>
+                    <div class="seat" data-id="17"></div>
+                    <div class="seat" data-id="18"></div>
+                    <div class="seat" data-id="19"></div>
+                    <div class="seat" data-id="20"></div>
+                  </div>
+                  <div class="row">
+                    <div class="seat booked" data-id="21"></div>
+                    <div class="seat" data-id="22"></div>
+                    <div class="seat" data-id="23"></div>
+                    <div class="seat" data-id="24"></div>
+                    <div class="seat" data-id="25"></div>
+                    <div class="seat" data-id="26"></div>
+                    <div class="seat" data-id="27"></div>
+                    <div class="seat" data-id="28"></div>
+                    <div class="seat" data-id="29"></div>
+                    <div class="seat" data-id="30"></div>
+                    <div class="seat" data-id="31"></div>
+                    <div class="seat" data-id="32"></div>
+                    <div class="seat" data-id="33"></div>
+                    <div class="seat" data-id="34"></div>
+                    <div class="seat" data-id="35"></div>
+                    <div class="seat" data-id="36"></div>
+                    <div class="seat" data-id="37"></div>
+                    <div class="seat" data-id="38"></div>
+                    <div class="seat" data-id="39"></div>
+                    <div class="seat" data-id="40"></div>
+                    <div class="seat" data-id="41"></div>
+                    <div class="seat" data-id="42"></div>
+                  </div>
+            </div>
+            <div class="vipbiljetter">
+                <div class="viprow">
+                    <div class="vipseat" data-id="1"></div>
+                </div>
+            </div>
         </div>
 
-        <div id="seatSelectionLabel">Valda platser: Inga</div>
+        <div id="seatSelectionLabel">Standard platser valda: Inga</div>
+        <div id="vipseatSelectionLabel">Vip platser valda: Inga</div>
         <script src="platser.js"></script>
 
         <button id="payButton" >Betala</button>
@@ -170,6 +178,7 @@
                 <p class="swishP">Scanna QR koden nedan för att slutföra din betalning:</p>
                 <img src="Resources/Pictures/swish.jpg" alt="Swish QR Code">
                 <p id="selectedSeatsDisplay">Skriv in dina platser du bokar i swishen, dina platser är: </p>
+                <p id="PrisBiljetter">Det du ska betala är: </p>
                 <button class="close-modal">Stäng</button>
             </div>
         

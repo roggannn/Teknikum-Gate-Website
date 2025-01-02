@@ -1468,13 +1468,19 @@ body{
     width:min-content;
 }
 
-.bordPlacering .row{
+.bordPlacering .standardbiljetter{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+}
+
+.bordPlacering .standardbiljetter .row{
     display: flex;
     gap: 5px;
     
 }
 
-.bordPlacering .seat{
+.bordPlacering .standardbiljetter .seat{
     width:20px;
     height:20px;
     background-color: #088853;
@@ -1483,28 +1489,28 @@ body{
     transition: background-color 0.3s ease;
 }
 
-.bordPlacering .seat.preview{
+.bordPlacering .standardbiljetter .seat.preview{
     background-color: #0aa162;
     outline: black auto 2px;
     opacity: 70%;
 }
 
-.bordPlacering .seat.selected{
+.bordPlacering .standardbiljetter .seat.selected{
     background-color: var(--accent-color2);
     outline: black auto 2px;
 }
 
-.bordPlacering .seat.booked{
+.bordPlacering .standardbiljetter .seat.booked{
     background-color: rgb(177, 12, 12);
     cursor: not-allowed;
 }
 
-.bordPlacering .seat.vip.booked {
+.bordPlacering .standardbiljetter .seat.vip.booked {
     background-color: rgb(177, 12, 12); 
     position: relative;
 }
 
-.bordPlacering .seat.vip.booked::after {
+.bordPlacering .standardbiljetter .seat.vip.booked::after {
     content: '★'; 
     color: gold; 
     font-size: 12px; 
@@ -1515,6 +1521,24 @@ body{
     pointer-events: none;
 }
 
+@media screen and (max-width: 1200px){
+    .beställning{
+        grid-row-start:16;
+        grid-column-start:3;
+        grid-column-end:6;
+        width:80%;
+        height:85%;
+    }
+
+    .bordPlacering{
+        grid-column-start:2;
+        grid-row-start:17;
+        grid-row-start:18;
+        width:100%;
+    }
+
+}
+
 #seatSelectionLabel{
     margin-top: 20px;
     font-size: 12px;
@@ -1522,7 +1546,18 @@ body{
     text-align: center;
     font-weight: bold;
     grid-row-start: 21;
-    grid-column-start:4;
+    grid-column-start: 4;
+    grid-column-end: 4;
+}
+
+#vipseatSelectionLabel{
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--accent-color);
+    text-align: center;
+    font-weight: bold;
+    grid-row-start: 21;
+    grid-column-start:5;
     grid-column-end:5;
 }
 
