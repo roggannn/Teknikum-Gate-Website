@@ -112,6 +112,7 @@
 
         <div class="bordPlacering">
             <div class="standardbiljetter">
+                <h3 style="text-decoration:underline;">Standard Platser</h3>
                 <div class="row">
                     <div class="seat" data-id="1"></div>
                     <div class="seat" data-id="2"></div>
@@ -159,16 +160,31 @@
                     <div class="seat" data-id="42"></div>
                   </div>
             </div>
+            
             <div class="vipbiljetter">
+                <h3 style="text-decoration:underline;">Vip Platser</h3>
                 <div class="viprow">
-                    <div class="vipseat" data-id="1"></div>
+                    <div class="vipseat" data-id="v1"></div>
+                    <div class="vipseat" data-id="v2"></div>
+                    <div class="vipseat" data-id="v3"></div>
+                    <div class="vipseat" data-id="v4"></div>
+                    <div class="vipseat" data-id="v5"></div>
+                </div>
+                <div class="viprow">
+                    <div class="vipseat" data-id="v6"></div>
+                    <div class="vipseat" data-id="v7"></div>
+                    <div class="vipseat" data-id="v8"></div>
+                    <div class="vipseat" data-id="v9"></div>
+                    <div class="vipseat" data-id="v10"></div>
                 </div>
             </div>
+            
         </div>
 
-        <div id="seatSelectionLabel">Standard platser valda: Inga</div>
-        <div id="vipseatSelectionLabel">Vip platser valda: Inga</div>
-        <script src="platser.js"></script>
+        <div id="seatSelectionLabel">Inga standard platser valda</div>
+        <div id="vipseatSelectionLabel">Inga vip platser valda</div>
+        <script src="vipplatser.js" defer></script>
+        <script src="platser.js" defer></script>
 
         <button id="payButton" >Betala</button>
 

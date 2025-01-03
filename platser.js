@@ -7,8 +7,6 @@ const modalOverlay = document.getElementById('modalOverlay');
 const swishModal = document.getElementById('swishModal');
 const agreementModal = document.getElementById('agreementModal');
 
-let agreementAccepted = false;
-
 let ticketsToBuy = 0;
 
 function selectSeats(ticketCount) {
@@ -91,7 +89,7 @@ function updateSeatLabel() {
 
 seats.forEach((seat, index) => {
     seat.addEventListener('click', () => {
-        
+        console.log("Standard plats tryckt")
         if (ticketsToBuy <= 0) {
             seatSelectionLabel.textContent = "Du behöver välja åtminstone 1 standard biljett!";
             return;
@@ -104,6 +102,7 @@ seats.forEach((seat, index) => {
     });
 
     seat.addEventListener('mouseenter', () => {
+        console.log("Standard plats hover")
         if (ticketsToBuy > 0 && !seat.classList.contains('booked')) {
             previewSelection(index, ticketsToBuy);
         }
@@ -131,33 +130,6 @@ function minus22() {
     updateSelectedSeatsDisplay();
 }
 
-function showAgreementModal() {
-    modalOverlay.style.display = 'flex';
-    agreementModal.style.display = 'block';
-    swishModal.style.display = 'none';
-}
-
-function acceptAgreement() {
-    agreementAccepted = true;
-    agreementModal.style.display = 'none';
-    swishModal.style.display = 'block'; // Directly proceed to the Swish modal
-}
-
-function showSwishModal() {
-    if (!agreementAccepted) {
-        showAgreementModal(); // Show the agreement modal first
-    } else {
-        modalOverlay.style.display = 'flex';
-        swishModal.style.display = 'block';
-    }
-}
-
-function closeModal() {
-    modalOverlay.style.display = 'none';
-    swishModal.style.display = 'none';
-    agreementModal.style.display = 'none';
-}
-
 function updateSelectedSeatsDisplay() {
     const selectedSeats = [];
     seats.forEach((seat, index) => {
@@ -181,7 +153,5 @@ function updateSelectedSeatsDisplay() {
 }
 
 seats.forEach((seat) => {
-    seat.addEventListener('click', updateSelectedSeatsDisplay2);
+    seat.addEventListener('click', updateSelectedSeatsDisplay);
 });
-
-payButton.addEventListener('click', showSwishModal);

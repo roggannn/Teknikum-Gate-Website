@@ -1,47 +1,41 @@
 const vipseats = document.querySelectorAll('.vipseat');
 const ticketCountLabel2 = document.getElementById('antalLabel');
-const seatSelectionLabel = document.getElementById('seatSelectionLabel');
-const vipknapp1 = document.getElementById('vipKnapp1');
-const vipknapp2 = document.getElementById('vipKnapp2');
-
-const payButton = document.getElementById('payButton');
-const modalOverlay = document.getElementById('modalOverlay');
-const swishModal = document.getElementById('swishModal');
-const agreementModal = document.getElementById('agreementModal');
+const vipseatSelectionLabel = document.getElementById('vipseatSelectionLabel');
 
 let agreementAccepted = false;
 
 let vipticketsToBuy = 0;
 
-function selectVIPSeats(ticketCount) {
-    seats.forEach(seat => seat.classList.remove('selected'));
+function selectVIPSeats(vipticketCount) {
+    vipseats.forEach(vipseat => vipseat.classList.remove('selected'));
+    
+    let selectedvipSeats = 0;
 
-    let selectedSeats = 0;
-
-    for (let i = 0; i < seats.length; i++) {
-        if (!seats[i].classList.contains('booked') && selectedSeats < ticketCount) {
-            seats[i].classList.add('selected');
-            selectedSeats++;
+    for (let i = 0; i < vipseats.length; i++) {
+        if (!vipseats[i].classList.contains('booked') && selectedvipSeats < vipticketCount) {
+            vipseats[i].classList.add('selected');
+            selectedvipSeats++;
+            console.log(selectedvipSeats);
         }
     }
 
     updateSeatLabel2();
 }
 
-function adjustSelection2(clickedSeatIndex, ticketCount) {
-    ticketCount = Math.max(1, Math.min(ticketCount, 5)); 
+function adjustSelection2(clickedvipSeatIndex, vipticketCount) {
+    vipticketCount = Math.max(1, Math.min(vipticketCount, 5)); 
 
-    let startIndex = Math.max(0, clickedSeatIndex - Math.floor(ticketCount / 2));
-    let endIndex = Math.min(seats.length, startIndex + ticketCount);
+    let vipstartIndex = Math.max(0, clickedvipSeatIndex - Math.floor(vipticketCount / 2));
+    let vipendIndex = Math.min(vipseats.length, vipstartIndex + vipticketCount);
 
-    let selectedSeats = 0;
+    let selectedvipSeats = 0;
 
-    seats.forEach(seat => seat.classList.remove('selected'));
+    vipseats.forEach(vipseat => vipseat.classList.remove('selected'));
 
-    for (let i = startIndex; i < endIndex; i++) {
-        if (!seats[i].classList.contains('booked') && selectedSeats < ticketCount) {
-            seats[i].classList.add('selected');
-            selectedSeats++;
+    for (let i = vipstartIndex; i < vipendIndex; i++) {
+        if (!vipseats[i].classList.contains('booked') && selectedvipSeats < vipticketCount) {
+            vipseats[i].classList.add('selected');
+            selectedvipSeats++;
         }
     }
 
@@ -49,139 +43,110 @@ function adjustSelection2(clickedSeatIndex, ticketCount) {
     updateSeatLabel2();
 }
 
-function previewSelection2(clickedSeatIndex, ticketCount) {
-    ticketCount = Math.max(1, Math.min(ticketCount, 5));
+function previewSelection2(clickedvipSeatIndex, vipticketCount) {
+    vipticketCount = Math.max(1, Math.min(vipticketCount, 5));
 
-    let startIndex = Math.max(0, clickedSeatIndex - Math.floor(ticketCount / 2));
-    let endIndex = Math.min(seats.length, startIndex + ticketCount);
+    let vipstartIndex = Math.max(0, clickedvipSeatIndex - Math.floor(vipticketCount / 2));
+    let vipendIndex = Math.min(vipseats.length, vipstartIndex + vipticketCount);
 
-    seats.forEach(seat => seat.classList.remove('preview'));
+    vipseats.forEach(vipseat => vipseat.classList.remove('preview'));
 
-    let selectedSeats = 0;
+    let selectedvipSeats = 0;
 
-    for (let i = startIndex; i < endIndex && selectedSeats < ticketCount; i++) {
-        if (!seats[i].classList.contains('booked')) {
-            seats[i].classList.add('preview');
-            selectedSeats++;
+    for (let i = vipstartIndex; i < vipendIndex && selectedvipSeats < vipticketCount; i++) {
+        if (!vipseats[i].classList.contains('booked')) {
+            vipseats[i].classList.add('preview');
+            selectedvipSeats++;
         }
     }
 }
 
 function updateSeatLabel2() {
-    const selectedSeats = Array.from(seats).filter(seat => seat.classList.contains('selected'));
-    const seatNumbers = [];
+    const selectedvipSeats = Array.from(vipseats).filter(vipseat => vipseat.classList.contains('selected'));
+    const vipseatNumbers = [];
 
     
-    seats.forEach((seat, index) => {
-        if (seat.classList.contains('selected')) {
-            seatNumbers.push(index + 1); 
+    vipseats.forEach((vipseat, vipindex) => {
+        if (vipseat.classList.contains('selected')) {
+            vipseatNumbers.push(vipindex + 1); 
         }
     });
 
     const payButton = document.getElementById('payButton');
-    if (selectedSeats.length > 0) {
+    if (selectedvipSeats.length > 0) {
         payButton.style.display = 'block';
     } else {
         payButton.style.display = 'none';
     }
     
-    seatSelectionLabel.textContent = seatNumbers.length > 0
-        ? `Vip platser valda: ${seatNumbers.join(', ')}`
+    vipseatSelectionLabel.textContent = vipseatNumbers.length > 0
+        ? `Vip platser valda: ${vipseatNumbers.join(', ')}`
         : 'Inga vip platser valda';
+    updateSelectedSeatsDisplay2();
 }
 
-seats.forEach((seat, index) => {
-    seat.addEventListener('click', () => {
-        
-        if (ticketsToBuy <= 0) {
-            seatSelectionLabel.textContent = "Du behöver välja åtminstone 1 standard biljett!";
+vipseats.forEach((vipseat, vipindex) => {
+    vipseat.addEventListener('click', () => {
+        console.log("Vip plats tryckt")
+        if (vipticketsToBuy <= 0) {
+            vipseatSelectionLabel.textContent = "Du behöver välja åtminstone 1 vip biljett!";
             return;
         }
 
         
-        if (!seat.classList.contains('booked')) {
-            adjustSelection(index, ticketsToBuy);
+        if (!vipseat.classList.contains('booked')) {
+            adjustSelection2(vipindex, vipticketsToBuy);
+        }
+
+        updateSelectedSeatsDisplay2();
+    });
+
+    vipseat.addEventListener('mouseenter', () => {
+        console.log("Vip plats hover")
+        if (vipticketsToBuy > 0 && !vipseat.classList.contains('booked')) {
+            previewSelection2(vipindex, vipticketsToBuy);
         }
     });
 
-    seat.addEventListener('mouseenter', () => {
-        if (ticketsToBuy > 0 && !seat.classList.contains('booked')) {
-            previewSelection(index, ticketsToBuy);
-        }
-    });
-
-    seat.addEventListener('mouseleave', () => {
-        seats.forEach(seat => seat.classList.remove('preview'));
+    vipseat.addEventListener('mouseleave', () => {
+        vipseats.forEach(vipseat => vipseat.classList.remove('preview'));
     });
 });
 
 function plus1() {
     
-    ticketsToBuy = Math.min(ticketsToBuy + 1, 5);
-    ticketCountLabel.innerText = ticketsToBuy;
+    vipticketsToBuy = Math.min(vipticketsToBuy + 1, 5);
+    ticketCountLabel2.innerText = vipticketsToBuy;
 
-    selectSeats(ticketsToBuy);
+    selectVIPSeats(vipticketsToBuy);
     updateSelectedSeatsDisplay2();
 }
 
 function minus1() {
-    ticketsToBuy = Math.max(ticketsToBuy - 1, 0);
-    ticketCountLabel.innerText = ticketsToBuy;
+    vipticketsToBuy = Math.max(vipticketsToBuy - 1, 0);
+    ticketCountLabel2.innerText = vipticketsToBuy;
 
-    selectSeats(ticketsToBuy);
+    selectVIPSeats(vipticketsToBuy);
     updateSelectedSeatsDisplay2();
 }
 
-function showAgreementModal() {
-    modalOverlay.style.display = 'flex';
-    agreementModal.style.display = 'block';
-    swishModal.style.display = 'none';
-}
-
-function acceptAgreement() {
-    agreementAccepted = true;
-    agreementModal.style.display = 'none';
-    swishModal.style.display = 'block'; // Directly proceed to the Swish modal
-}
-
-function showSwishModal() {
-    if (!agreementAccepted) {
-        showAgreementModal(); // Show the agreement modal first
-    } else {
-        modalOverlay.style.display = 'flex';
-        swishModal.style.display = 'block';
-    }
-}
-
-function closeModal() {
-    modalOverlay.style.display = 'none';
-    swishModal.style.display = 'none';
-    agreementModal.style.display = 'none';
-}
-
 function updateSelectedSeatsDisplay2() {
-    const selectedSeats = [];
-    seats.forEach((seat, index) => {
-        if (seat.classList.contains('selected')) {
-            selectedSeats.push(index + 1); // Adjust if seat numbering starts differently
+    const selectedvipSeats = [];
+    vipseats.forEach((vipseat, vipindex) => {
+        if (vipseat.classList.contains('selected')) {
+            selectedvipSeats.push(vipindex + 1); // Adjust if seat numbering starts differently
         }
     });
 
     const displayElement = document.getElementById('selectedSeatsDisplay');
     let price = 0;
 
-    if (selectedSeats.length > 0) {
-        displayElement.textContent = `Skriv in vip platserna du bokar i swishen, dina platser är: ${selectedSeats.join(', ')}`;
-        price = document.getElementById("antalLabel").textContent * 250 + document.getElementById("antalLabel2").textContent * 200 + " kr";
+    if (selectedvipSeats.length > 0) {
+        displayElement.textContent = `Skriv in vip platserna du bokar i swishen, dina platser är: ${selectedvipSeats.join(', ')}`;
+        price = (parseInt(document.getElementById("antalLabel").textContent) * 250 + parseInt(document.getElementById("antalLabel2").textContent) * 200) + " kr";
         document.getElementById('PrisBiljetter').textContent = "Det du ska betala är: " + price;
     } else {
         displayElement.textContent = `Skriv in vip platserna du bokar i swishen, dina platser är: Inga valda`;
         document.getElementById('PrisBiljetter').textContent = "";
     }
 }
-
-seats.forEach((seat) => {
-    seat.addEventListener('click', updateSelectedSeatsDisplay);
-});
-
-payButton.addEventListener('click', showSwishModal);
