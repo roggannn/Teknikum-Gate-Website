@@ -1783,12 +1783,13 @@ body{
     width:70vw;
     height:15%;
     grid-template-columns:1% 5fr 1%;
-    grid-template-rows:0.5fr 0.5fr 0.5fr 1px;
+    grid-template-rows:0.5fr 0.5fr 0.5fr 1px 1px;
     
     grid-template-areas:
     ". turneringH ."
     ". undertext ."
     ". turneringnav ."
+    ". line1T ."
     "lineT lineT lineT";
 }
 
@@ -1844,4 +1845,50 @@ body{
     width:100%;
     background-color:gray;
     opacity: 50%;
+}
+
+.upperline{
+    grid-area:turneringnav;
+    display:grid;
+    margin-left:10px;
+    grid-template-columns:40px 16px 44px 15px 1fr;
+    grid-template-areas:
+    "cs . lol . rocketleague";
+    background-color: transparent;
+    width:240px;
+    height:5%;
+    align-self:end;
+}
+
+.upperline .CS2{
+    grid-area:cs;
+}
+
+.upperline .LoL{
+    grid-area:lol;
+}
+
+.upperline .RocketL{
+    grid-area:rocketleague;
+}
+
+.upperline .CS2on{
+    grid-area:cs;
+    opacity:100%;
+    background-color:var(--accent-color2);
+    border-radius:2px;
+}
+
+.upperline .LoLon{
+    grid-area:lol;
+    opacity:100%;
+    background-color:var(--accent-color2);
+    border-radius:2px;
+}
+
+.upperline .RocketLon{
+    grid-area:rocketleague;
+    opacity:100%;
+    background-color:var(--accent-color2);
+    border-radius:2px;
 }
