@@ -141,6 +141,22 @@
     "footer footer footer footer footer footer footer footer footer footer";
 }
 
+.tavlingarContent{
+    display:grid;
+    width:99.5vw;
+    padding:0;
+    margin:0;
+    grid-template-columns: repeat(10,1.25fr);
+    grid-auto-rows: minmax(60px, auto);
+    border:0;
+    gap:0;
+
+    grid-template-areas:
+    "header header header header header header header header header header"
+    "mainT mainT mainT mainT mainT mainT mainT mainT mainT mainT"
+    "footer footer footer footer footer footer footer footer footer footer";
+}
+
 body{
     position:absolute;
     top:0;
@@ -169,16 +185,6 @@ body{
     grid-template-columns:1fr 3fr;
     grid-template-areas:
     "gate annat";
-}
-
-.fragorH{
-    grid-area: headerF;
-    background-color:var(--secondary-color2);
-    padding:0;
-    margin:0;
-    border:0;
-    height:60px;
-    gap:0;
 }
 
 .content .bild{
@@ -494,6 +500,11 @@ body{
 }
 
 .FragorNav{
+    text-shadow:var(--accent-color2) 1px 10px 12px;
+    color:var(--accent-color3) !important;
+}
+
+.TavlingarNav{
     text-shadow:var(--accent-color2) 1px 10px 12px;
     color:var(--accent-color3) !important;
 }
@@ -1340,6 +1351,12 @@ body{
     height:1000px;
 }
 
+.tavlingarM{
+    grid-area:mainT;
+    background-color: var(--primary-color);
+    height:1000px;
+}
+
 .beställning{
     grid-row-start:18;
     grid-column-start:2;
@@ -1745,4 +1762,86 @@ body{
 
 .villkorDiv p{
     text-align:left;
+}
+
+.turneringarDiv{
+    grid-area:mainT;
+    display:flex;
+    height:100%;
+    width:100%;
+    padding:0;
+    margin:0;
+    gap:0;
+    border:0;
+    align-content:center;
+    justify-content:center;
+}
+
+.turneringarH{
+    margin:50px;
+    display:grid;
+    width:70vw;
+    height:15%;
+    grid-template-columns:1% 5fr 1%;
+    grid-template-rows:0.5fr 0.5fr 0.5fr 1px;
+    
+    grid-template-areas:
+    ". turneringH ."
+    ". undertext ."
+    ". turneringnav ."
+    "lineT lineT lineT";
+}
+
+.turneringarH h1{
+    color:var(--accent-color3);
+    font-family:myFirstFont;
+    grid-area:turneringH;
+    gap:0;
+    margin:0;
+    padding:0;
+}
+
+.turneringarH h3{
+    color:var(--accent-color2);
+    grid-area:undertext;
+    margin:5px;
+    margin-left:10px;
+    font-size:15px;
+    opacity:85%;
+}
+
+.turneringarNav{
+    grid-area: turneringnav;
+}
+
+.turneringarNav ul{
+    list-style-type:none;
+    background-color:transparent;
+    padding:0px;
+    margin:0px;
+    overflow:hidden;
+}
+
+.turneringarNav a{
+    color: rgb(179, 177, 177);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    font-weight:bold;
+}
+
+.turneringarNav a:hover{
+    color:var(--accent-color2);
+}
+
+.turneringarNav li{
+    float: left;
+}
+
+.line{
+    grid-area:lineT;
+    width:100%;
+    background-color:gray;
+    opacity: 50%;
 }
