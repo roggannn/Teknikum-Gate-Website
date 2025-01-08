@@ -3,7 +3,6 @@ let value = 0;
 function plus() {
     if (ticketsToBuy <= 0){
         if (value < 5) {
-        
             value++;
             document.getElementById("antalLabel").textContent = value;
         }

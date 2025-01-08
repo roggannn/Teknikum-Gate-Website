@@ -1615,7 +1615,7 @@ body{
 
 #seatSelectionLabel{
     margin-top: 20px;
-    font-size: 12px;
+    font-size: 10px;
     color: var(--accent-color);
     text-align: center;
     font-weight: bold;
@@ -1626,7 +1626,7 @@ body{
 
 #vipseatSelectionLabel{
     margin-top: 20px;
-    font-size: 12px;
+    font-size: 10px;
     color: var(--accent-color);
     text-align: center;
     font-weight: bold;

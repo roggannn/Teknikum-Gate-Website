@@ -114,20 +114,31 @@ seats.forEach((seat, index) => {
 });
 
 function plus22() {
+    if (vipticketsToBuy <= 0){
+        ticketsToBuy = Math.min(ticketsToBuy + 1, 5);
+        ticketCountLabel.innerText = ticketsToBuy;
     
-    ticketsToBuy = Math.min(ticketsToBuy + 1, 5);
-    ticketCountLabel.innerText = ticketsToBuy;
-
-    selectSeats(ticketsToBuy);
-    updateSelectedSeatsDisplay();
+        selectSeats(ticketsToBuy);
+        updateSelectedSeatsDisplay();
+    }
+    else{
+        seatSelectionLabel.innerText = "Du kan inte ha båda typer av biljetter i samma beställning."
+        ticketCountLabel2.innertext = "0";
+    }
 }
 
 function minus22() {
-    ticketsToBuy = Math.max(ticketsToBuy - 1, 0);
-    ticketCountLabel.innerText = ticketsToBuy;
-
-    selectSeats(ticketsToBuy);
-    updateSelectedSeatsDisplay();
+    if (vipticketsToBuy <= 0){
+        ticketsToBuy = Math.max(ticketsToBuy - 1, 0);
+        ticketCountLabel.innerText = ticketsToBuy;
+    
+        selectSeats(ticketsToBuy);
+        updateSelectedSeatsDisplay();
+    }
+    else{
+        seatSelectionLabel.innerText = "Du kan inte ha båda typer av biljetter i samma beställning."
+        ticketCountLabel2.innertext = "0";
+    }
 }
 
 function updateSelectedSeatsDisplay() {
