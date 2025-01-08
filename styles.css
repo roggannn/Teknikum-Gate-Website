@@ -1527,22 +1527,6 @@ body{
     cursor: not-allowed;
 }
 
-.bordPlacering .standardbiljetter .seat.vip.booked {
-    background-color: rgb(177, 12, 12); 
-    position: relative;
-}
-
-.bordPlacering .standardbiljetter .seat.vip.booked::after {
-    content: '★'; 
-    color: gold; 
-    font-size: 12px; 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}
-
 .bordPlacering .vipbiljetter{
     display:flex;
     flex-direction: column;
@@ -1584,7 +1568,7 @@ body{
     cursor: not-allowed;
 }
 
-.bordPlacering .vipbiljetter .vipseat.vip.booked::after {
+.bordPlacering .vipbiljetter .vipseat.booked::after {
     content: '★'; 
     color: gold; 
     font-size: 12px; 
