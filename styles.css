@@ -1568,16 +1568,6 @@ body{
     cursor: not-allowed;
 }
 
-.bordPlacering .vipbiljetter .vipseat.booked::after {
-    content: '★'; 
-    color: gold; 
-    font-size: 12px; 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}
 
 @media screen and (max-width: 1200px){
     .beställning{
