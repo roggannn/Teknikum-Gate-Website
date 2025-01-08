@@ -1579,7 +1579,7 @@ body{
     outline: black auto 2px;
 }
 
-.bordPlacering .vipbiljetter .vipseat.vip.booked{
+.bordPlacering .vipbiljetter .vipseat.booked{
     background-color: rgb(177, 12, 12);
     cursor: not-allowed;
 }
