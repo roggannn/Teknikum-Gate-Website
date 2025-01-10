@@ -1887,10 +1887,10 @@ body{
 }
 
 .turneringarMain .CS2-FiveT{
-    background-color: #313131;
+    background-color:#313131;
     width:20em;
     height:12em;
-    border-radius: 8px;
+    border-radius:8px;
     display:grid;
     grid-template-rows:65% 35%;
     grid-template-areas:
@@ -1900,23 +1900,70 @@ body{
 
 .turneringarMain .CS2-FiveT img{
     grid-area:bild;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
+    border-top-right-radius:8px;
+    border-top-left-radius:8px;
+    height:100%;
+    width:100%;
 }
 
 .turneringarMain .CS2-FiveT .TeXT{
     grid-area:text;
-    background-color: #272727;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+    background-color:#272727;
+    border-bottom-right-radius:8px;
+    border-bottom-left-radius:8px;
     padding-left:10px;
+    transition:0.15s;
 }
 
 .turneringarMain .CS2-FiveT .TeXT p{
-    color:white;
+    color:rgb(161, 161, 161);
+    font-weight: bold;
+    font-size:11px;
+    margin:5px;
+}
 
+
+.turneringarMain .CS2-FiveT .TeXT .p2{
+    color:white;
+    font-weight: bold;
+    font-size:14px;
+    margin:10px;
+    margin-left:5px;
 }
 
 .turneringarMain .CS2-FiveT:hover{
+    cursor:pointer;
+}
 
+.turneringarMain .CS2-FiveT:hover .TeXT{
+    background-color: #494949;
+}
+
+#turneringmodal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.tmodal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+}
+
+.close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor:pointer;
 }
