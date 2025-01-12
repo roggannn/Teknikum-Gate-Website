@@ -721,14 +721,80 @@ body{
 .feet .sponsorer{
     grid-area:sponsor;
     display:grid;
+    grid-template-rows:1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-areas:
+    "preem netatonce ragequit"
+    "jgrail frosekelivs cherryxtrfy"
+    "frosekeindustri frosekefolketshus brrosen";
     margin:10px;
     margin-top:25px;
     gap:5px;
 }
 
 .feet .sponsorer .preem{
-    width:40px;
-    height:40px;
+    width:50px;
+    height:50px;
+    border-radius: 3px;
+    grid-area:preem;
+}
+
+.feet .sponsorer .netatonce{
+    width:100px;
+    height:50px;
+    background-color: whitesmoke;
+    border-radius: 3px;
+    grid-area:netatonce;
+}
+
+.feet .sponsorer .ragequit{
+    width:50px;
+    height:50px;
+    border-radius: 3px;
+    grid-area:ragequit;
+}
+
+.feet .sponsorer .jgrail{
+    width:100px;
+    height:50px;
+    border-radius: 3px;
+    grid-area:jgrail;
+}
+
+.feet .sponsorer .frosekelivs{
+    width:100px;
+    height:50px;
+    border-radius: 3px;
+    grid-area:frosekelivs;
+}
+
+.feet .sponsorer .cherryxtrfy{
+    width:50px;
+    height:50px;
+    border-radius: 3px;
+    grid-area:cherryxtrfy;
+}
+
+.feet .sponsorer .frosekeindustri{
+    width:50px;
+    height:50px;
+    border-radius: 3px;
+    background-color: whitesmoke;
+    grid-area:frosekeindustri;
+}
+
+.feet .sponsorer .frosekefolketshus{
+    width:100px;
+    height:50px;
+    border-radius: 3px;
+    grid-area:frosekefolketshus;
+}
+
+.feet .sponsorer .brrosen{
+    width:50px;
+    height:50px;
+    border-radius: 3px;
+    grid-area:brrosen;
 }
 
 .feet .kontakt{
