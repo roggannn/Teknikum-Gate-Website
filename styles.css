@@ -1956,8 +1956,11 @@ body{
     padding: 20px;
     border-radius: 5px;
     text-align: center;
-    width: 300px;
+    align-items: center;
+    justify-content:center;
+    width: 450px;
     position: relative;
+    flex-direction: row;
 }
 
 .close-btn{
@@ -1966,4 +1969,46 @@ body{
     right: 10px;
     font-size: 20px;
     cursor:pointer;
+}
+
+#turneringmodal form{
+    display:flex;
+    flex-wrap:wrap;
+    align-content:center;
+    justify-content:center;
+    text-align:center;
+    
+}
+
+#turneringmodal form label{
+    align-self:center;
+    justify-self:center;
+    text-align:center;
+}
+
+#turneringmodal form .rad{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:10px;
+    text-align: left;
+    justify-content: left;
+    align-content: left;
+    width:100%;
+}
+
+#turneringmodal form .rad input{
+    text-align:center;
+    align-self:center;
+    justify-self:center;
+
+}
+
+#turneringmodal form input{
+    margin:2px;
+}
+
+#turneringmodal .break{
+    flex-basis: 100%;
+    height:0;
 }

@@ -9,9 +9,11 @@
     <link rel="icon" type="image/png" href="Resources/Pictures/favicon32.png" sizes="32x32">
 </head>
 <body>
+
     <div class="MobilFörbud" id="Mobilförbud">
         <p>Vänligen byt till en dator eller en enhet med muspekare tills vi har löst visningen för mobila enheter.</p>
     </div>
+
     <div class="tavlingarContent">
         <header class="indexH">
             <a href="index.html" class="h1">Teknikum Gate</a>
@@ -25,6 +27,7 @@
                 </ul>
             </nav>
         </header>
+
         <main class="tavlingarM">
             <div class="turneringarDiv">
                 <div class="turneringarH">
@@ -45,7 +48,7 @@
                     <div class="line"></div>
                 </div>
                 <div class="turneringarMain">
-                    <div class="CS2-FiveT">
+                    <div class="CS2-FiveT" id="CS2-FiveTid">
                         <img src="Resources/Pictures/cs2 picture.jpg" alt="Bild av en grabb som röker">
                         <div class="TeXT">
                             <p>2025-04-07 | Start 21.00</p>
@@ -56,14 +59,107 @@
                 <div id="turneringmodal">
                     <div class="tmodal-content">
                         <span class="close-btn">&times;</span>
-                        <h2>Modal Title</h2>
-                        <p>This is a simple modal pop-up.</p>
+                        <h2>Fyll i formuläret nedan för att registrera ditt lag!</h2>
+                        <form name="CS2-FiveT Lag" id="CS2FiveTForm">
+                            <label for="lagnamn">Lagnamn: </label>
+                            <input type="text" id="lagnamn" name="lagnamn" required>
+
+                            <div class="break"></div>
+
+                            <label for="spelare1">Spelare 1 Ingame-Nick: </label>
+                            <input type="text" id="spelare1" name="spelare1" required>
+                            <div class="break"></div>
+                            <label for="spelare1SteamID">Spelare 1 SteamID: </label>
+                            <input type="text" id="spelare1SteamID" name="spelare1SteamID" placeholder="STEAMID:" required>
+
+                            <div class="break"></div>
+
+                            <label for="spelare2">Spelare 2 Ingame-Nick: </label>
+                            <input type="text" id="spelare2" name="spelare2" required>
+                            <div class="break"></div>
+                            <label for="spelare2SteamID">Spelare 2 SteamID: </label>
+                            <input type="text" id="spelare2SteamID" name="spelare2SteamID" placeholder="STEAMID:" required>
+
+                            <div class="break"></div>
+
+                            <label for="spelare3">Spelare 3 Ingame-Nick: </label>
+                            <input type="text" id="spelare3" name="spelare3" required>
+                            <div class="break"></div>
+                            <label for="spelare3SteamID">Spelare 3 SteamID: </label>
+                            <input type="text" id="spelare3SteamID" name="spelare3SteamID" placeholder="STEAMID:" required>
+
+                            <div class="break"></div>
+
+                            <label for="spelare4">Spelare 4 Ingame-Nick: </label>
+                            <input type="text" id="spelare4" name="spelare4" required>
+                            <div class="break"></div>
+                            <label for="spelare4SteamID">Spelare 4 SteamID: </label>
+                            <input type="text" id="spelare4SteamID" name="spelare4SteamID" placeholder="STEAMID:" required>
+
+                            <div class="break"></div>
+
+                            <label for="spelare5">Spelare 5 Ingame-Nick: </label>
+                            <input type="text" id="spelare5" name="spelare5" required>
+                            <div class="break"></div>
+                            <label for="spelare5SteamID">Spelare 5 SteamID: </label>
+                            <input type="text" id="spelare5SteamID" name="spelare5SteamID" placeholder="STEAMID:" required>
+
+                            <div class="break"></div>
+                            
+                            <label for="lagkapten">Lag kapten Ingame-Nick: </label>
+                            <input type="text" id="lagkapten" name="lagkapten" required>
+
+                            <div class="break"></div>
+
+                            <label for="coach">Coach Ingame-Nick: </label>
+                            <input type="text" id="coach" name="coach">
+                            <div class="break"></div>
+                            <label for="coachSteamID">Coach SteamID: </label>
+                            <input type="text" id="coachSteamID" name="coachSteamID" placeholder="STEAMID:">
+
+                            <div class="break"></div>
+
+                            <p>OBS: Vissa fält behövs inte fyllas i, t.ex. Coach.</p>
+                            
+                            <div class="break"></div>
+
+                            <button type="submit">Skicka in</button>
+                        </form>
+
+                        <script>
+                            const scriptURL = 'https://script.google.com/macros/s/AKfycbyeFt4IX6jMUlDlE_L_rUk67NUObtZjXATYHt-iMRnbEPay3nrPePPxOJMJ1UFkaJ_Q/exec';
+                            const form = document.getElementById('CS2FiveTForm');
+                        
+                            form.addEventListener('submit', (e) => {
+                              e.preventDefault();
+                        
+                              const formData = new FormData(form);
+                              const data = Object.fromEntries(formData.entries());
+                        
+                              fetch(scriptURL, {
+                                method: 'POST',
+                                body: JSON.stringify(data),
+                                headers: {
+                                  'Content-Type': 'application/json',
+                                },
+                                mode: 'no-cors',
+                              })
+                                .then((response) => response.text())
+                                .then((text) => {
+                                  alert('Form submitted successfully!');
+                                  form.reset();
+                                })
+                                .catch((error) => console.error('Error:', error));
+                            });
+                          </script>
+
                     </div>
                 </div>
                 <script src="CS2Sign.js"></script>
             </div>
         </main>
-<footer class="feet">
+
+        <footer class="feet">
             <div class="sponsorer">
                 <a href="https://www.preem.com" class="preem">
                     <img src="Resources/Pictures/preem.png" alt="Logo av Preem" class="preem">
