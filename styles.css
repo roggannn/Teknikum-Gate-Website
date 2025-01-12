@@ -1898,13 +1898,14 @@ body{
     grid-area:turneringnav;
     display:grid;
     margin-left:10px;
-    grid-template-columns:40px 16px 44px 15px 1fr;
+    grid-template-columns:40px 50px 110px 85px 5px;
     grid-template-areas:
-    "cs . lol . rocketleague";
+    "cs lol rocketleague . brawlhalla";
     background-color: transparent;
-    width:240px;
+    width:500px;
     height:5%;
     align-self:end;
+    gap:15px;
 }
 
 .upperline .CS2{
@@ -1917,6 +1918,10 @@ body{
 
 .upperline .RocketL{
     grid-area:rocketleague;
+}
+
+.upperline .Brawl{
+    grid-area:brawlhalla;
 }
 
 .upperline .CS2on{
@@ -1938,6 +1943,14 @@ body{
     opacity:100%;
     background-color:var(--accent-color2);
     border-radius:2px;
+}
+
+.upperline .Brawlon{
+    grid-area:brawlhalla;
+    opacity:100%;
+    background-color:var(--accent-color2);
+    border-radius:2px;
+    margin-left:-100px;
 }
 
 .turneringarMain{
