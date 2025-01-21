@@ -2100,16 +2100,181 @@ body{
     height:0;
 }
 
-.vanligaFrågor{
+.vanligaFragor{
     width:100%;
     height:100%;
     display:grid;
-    grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
-    grid-auto-rows: 1fr 1fr 1fr;
+    margin-top:20px;
+    grid-template-columns: 10px 2fr 2fr 2fr 10px;
+    grid-template-rows: 1fr 1fr 1fr;
 
     grid-template-areas: 
     ". vanligF1 vanligF2 vanligF3 ."
     ". vanligF4 vanligF5 vanligF6 ."
     ". egenfråga egenfråga egenfråga .";
+}
+
+.vanligfraga1{
+    grid-area:vanligF1;
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.vanligfraga2{
+    grid-area:vanligF2;
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.vanligfraga3{
+    grid-area:vanligF3;
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.vanligfraga4{
+    grid-area:vanligF4;
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.vanligfraga1 .fraga{
+    background-color: var(--accent-color3);
+    border-radius:10px;
+    height:min-content;
+    width:90%;
+    padding:10px;
+    margin:0;
+    gap:0;
+    transition:all 1s;
+}
+
+.vanligfraga2 .fraga{
+    background-color: var(--accent-color3);
+    border-radius:10px;
+    height:min-content;
+    width:90%;
+    padding:10px;
+    margin:0;
+    gap:0;
+    transition:all 1s;
+}
+
+.vanligfraga3 .fraga{
+    background-color: var(--accent-color3);
+    border-radius:10px;
+    height:min-content;
+    width:90%;
+    padding:10px;
+    margin:0;
+    gap:0;
+    transition:all 1s;
+}
+
+.vanligfraga4 .fraga{
+    background-color: var(--accent-color3);
+    border-radius:10px;
+    height:min-content;
+    width:90%;
+    padding:10px;
+    margin:0;
+    gap:0;
+    transition:all 1s;
+}
+
+.vanligfraga1 .svar{
+    opacity:0;
+    transition: all 1s;
+    background-color: var(--accent-color2);
+    margin-top:10px;
+    border-radius:10px;
+    padding:10px;
+    justify-self:center;
+    align-self:center;
+    width:80%;
+}
+
+.vanligfraga2 .svar{
+    opacity:0;
+    transition: all 1s;
+    background-color: var(--accent-color2);
+    margin-top:10px;
+    border-radius:10px;
+    padding:10px;
+    justify-self:center;
+    align-self:center;
+    width:80%;
+}
+
+.vanligfraga3 .svar{
+    opacity:0;
+    transition: all 1s;
+    background-color: var(--accent-color2);
+    margin-top:10px;
+    border-radius:10px;
+    padding:10px;
+    justify-self:center;
+    align-self:center;
+    width:80%;
+}
+
+.vanligfraga4 .svar{
+    opacity:0;
+    transition: all 1s;
+    background-color: var(--accent-color2);
+    margin-top:10px;
+    border-radius:10px;
+    padding:10px;
+    justify-self:center;
+    align-self:center;
+    width:80%;
+}
+
+.vanligfraga1 .fraga:hover{
+    box-shadow: var(--accent-color) 0px 0px 5px;
+}
+
+.vanligfraga1 .fraga:hover + .svar{
+    opacity:100;
+    box-shadow: var(--accent-color) 0px 0px 5px;
+}
+
+.vanligfraga2 .fraga:hover{
+    box-shadow: var(--accent-color) 0px 0px 5px;
+}
+
+.vanligfraga2 .fraga:hover + .svar{
+    opacity:100;
+    box-shadow: var(--accent-color) 0px 0px 5px;
+}
+
+.vanligfraga3 .fraga:hover{
+    box-shadow: var(--accent-color) 0px 0px 5px;
+}
+
+.vanligfraga3 .fraga:hover + .svar{
+    opacity:100;
+    box-shadow: var(--accent-color) 0px 0px 5px;
+}
+
+.vanligfraga4 .fraga:hover{
+    box-shadow: var(--accent-color) 0px 0px 5px;
+}
+
+.vanligfraga4 .fraga:hover + .svar{
+    opacity:100;
+    box-shadow: var(--accent-color) 0px 0px 5px;
 }
 
