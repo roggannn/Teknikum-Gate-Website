@@ -2305,16 +2305,13 @@ body{
 
 .kontaktM{
     grid-area: mainK;
-    height:2000px;
+    height:700px;
     background: url(Resources/Pictures/cod.jpg);
     background-size:500px;
-    background-repeat:repeat;
     border-top: 1px solid rgba(174, 201, 250, 0.4);
-    z-index: -1;
     display:grid;
     grid-template-columns:1fr;
-    grid-template-rows:1fr 3fr;
-    anchor-name: "kontaktM";
+    grid-template-rows:2fr 3fr;
 
     grid-template-areas:
     "backdrop"
@@ -2329,40 +2326,67 @@ body{
     border-top: 1px solid rgba(174, 201, 250, 0.4);
     display:flex;
     flex-direction: row;
+    justify-content:center;
     gap:50px;
 }
 
-.kontaktM .support{
+.kontakthuvud .support{
     height:100px;
-    width:400px;
+    width:530px;
     padding:10px;
-    background-color:var(--primary-color);
+    background-color:var(--secondary-color2);
+    justify-self:center;
     display:flex;
-    position-anchor: "kontaktM";
-    position:relative;
-    left:40%;
-    top:40%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
-.kontaktM .support h1{
+.kontakthuvud .support h1{
     align-self:center;
     justify-self:center;
     text-align:center;
+    
 }
 
-.kontaktM .support a{
+.kontakthuvud .support a{
     justify-self:center;
     align-self:center;
     margin-left:20px;
+    position: relative;
     height:40px;
     width:50px;
     padding:0;
+    z-index:10;
+    pointer-events: auto;
+    transition:1s;
+}
+
+
+.kontakthuvud .support a:hover img{
+    width: 60px;
+    height: 50px;
 }
 
 .kontaktM .support a img{
     height:40px;
     width:50px;
     margin:0;
-    padding:0;
+    padding:0px;
+    transition:1s;
 }
 
+.kontaktM .support a{
+    text-decoration: underline;
+    color:white;
+
+}
+
+.kontaktM .support a p{
+    transition: 1s;
+
+}
+
+.kontaktM .support a:hover p{
+    font-size:18px;
+
+}

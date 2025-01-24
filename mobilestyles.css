@@ -5,4 +5,15 @@
     #Mobilförbud{
         visibility:visible;
     }
+    .kontakthuvud .support{
+        height:350px;
+        width:150px;
+        padding:10px;
+        background-color:var(--secondary-color2);
+        justify-self:center;
+        display:flex;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
 }
+@media ()
