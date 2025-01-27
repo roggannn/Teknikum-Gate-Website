@@ -30,7 +30,7 @@
         <main class="fragorM">
             <div class="vanligaFragor">
                 <div class=vanligfraga1>
-                    <div class="fraga" id="fraga1">
+                    <div class="fraga" id="fraga1" onclick="stayon(fraga1)">
                         <h1>Q: Vad behöver man ha med sig?</h1>
                     </div>
                     <div class="svar" id="svar1">
@@ -38,30 +38,77 @@
                     </div>
                 </div>
                 <div class=vanligfraga2>
-                    <div class="fraga">
+                    <div class="fraga" id="fraga2" onclick="stayon(fraga2)">
                         <h1>Q: Kan jag ta med en konsol istället för en dator?</h1>
                     </div>
-                    <div class="svar">
+                    <div class="svar" id="svar2">
                         <h3>A: Ja, konsoler är också välkomna! Glöm inte att ta med alla tillbehör du behöver, som kontroller och HDMI-kablar.</h3>
                     </div>
                 </div>
                 <div class=vanligfraga3>
-                    <div class="fraga">
+                    <div class="fraga" id="fraga3" onclick="stayon(fraga3)">
                         <h1>Q: Kan jag hyra en dator eller skärm på plats?</h1>
                     </div>
-                    <div class="svar">
+                    <div class="svar" id="svar3">
                         <h3>A: Nej, vi erbjuder tyvärr inte uthyrning av utrustning. Du måste ta med din egen utrustning.</h3>
                     </div>
                 </div>
                 <div class=vanligfraga4>
-                    <div class="fraga">
+                    <div class="fraga" id="fraga4" onclick="stayon(fraga4)">
                         <h1>Q: Får jag ta med fler än en skärm?</h1>
                     </div>
-                    <div class="svar">
+                    <div class="svar" id="svar4">
                         <h3>A: Du får endast ha 1 skärm, tyvärr. Annars så räcker strömmen inte till.</h3>
                     </div>
                 </div>
             </div>
+            <script>
+                function stayon(test){
+                    if (test == fraga1){
+                        let popup = document.getElementById("svar1");
+
+                        document.getElementById("svar2").style.opacity = 0;
+                        document.getElementById("svar3").style.opacity = 0;
+                        document.getElementById("svar4").style.opacity = 0;
+                        popup.style.opacity = 100;
+                        
+                    }
+                    else if (test == fraga2){
+                        let popup = document.getElementById("svar2");
+
+                        document.getElementById("svar3").style.opacity = 0;
+                        document.getElementById("svar4").style.opacity = 0;
+                        document.getElementById("svar1").style.opacity = 0;
+                        popup.style.opacity = 100;
+                    }
+                    else if (test == fraga3){
+                        let popup = document.getElementById("svar3");
+
+                        document.getElementById("svar4").style.opacity = 0;
+                        document.getElementById("svar1").style.opacity = 0;
+                        document.getElementById("svar2").style.opacity = 0;
+                        popup.style.opacity = 100;
+                    }
+                    else if (test == fraga4){
+                        let popup = document.getElementById("svar4");
+
+                        document.getElementById("svar1").style.opacity = 0;
+                        document.getElementById("svar2").style.opacity = 0;
+                        document.getElementById("svar3").style.opacity = 0;
+                        popup.style.opacity = 100;
+                    }
+                    else if (test == fraga5){
+
+                    }
+                    else{
+                        console.log(test);
+                    }
+                    
+
+                    
+                    
+                }
+            </script>
         </main>
         <footer class="feet">
             <div class="sponsorer">
