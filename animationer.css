@@ -1,0 +1,51 @@
+.gateteam-underline{
+    animation: underlinje 2s ease;
+}
+
+.gate-team{
+    animation: gateteam 2s ease;
+}
+
+.countdown{
+    animation: nedrakning 3s ease;
+    animation-iteration-count: infinite;
+    z-index: 99;
+}
+
+@keyframes nedrakning{
+    0%{
+        border: 2px black solid;
+        background-color: red;
+    }
+    40%{
+        border: 1px rgb(110, 107, 107) solid;
+        background-color: rgb(255, 24, 24);
+        box-shadow:0px 0px 10px grey;
+    }
+    100%{
+        border: 2px black solid;
+        background-color: rgb(255, 24, 24);
+    }
+}
+
+@keyframes gateteam{
+    0%{
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes underlinje{
+    0%{
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -2395,3 +2395,66 @@ body{
     font-size:18px;
 
 }
+
+.content .countdown{
+    position:absolute;
+    left:2%;
+    top:7%;
+    display:flex;
+    flex-direction: column;
+    border:2px black solid;
+    border-radius:10px;
+    padding-left:10px;
+    padding-right:10px;
+    align-content:center;
+    background-color: red;
+}
+
+.countdown h1{
+    padding:0;
+    margin-bottom:0;
+    text-decoration: underline;
+    font-family: myFirstFont;
+    letter-spacing: 1.2px;
+}
+
+.timebox{
+    padding:0;
+    display:flex;
+    justify-content:center;
+    gap:5px;
+    align-content:center;
+    align-items:center;
+}
+
+.time{
+    align-self:center;
+    text-align: center;
+}
+
+.time h2{
+    font-size:30px;
+    font-family: myFirstFont;
+}
+
+.time p{
+    font-weight: bold;
+}
+
+.gate-team{
+    text-align: center;
+    font-size:50px;
+    margin:0;
+    margin-top:15px;
+    font-family: myFirstFont;
+    color:var(--secondary-color);
+}
+
+.gateteam-underline{
+    width:400px;
+    height:6px;
+    background-color: var(--secondary-color);
+    border-radius:10px;
+    justify-self:center;
+    align-content:center;
+}
