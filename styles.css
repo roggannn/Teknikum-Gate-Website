@@ -539,6 +539,11 @@ body{
     color:var(--accent-color3) !important;
 }
 
+.reglerNav{
+    text-shadow:var(--accent-color2) 1px 10px 12px;
+    color:var(--accent-color3) !important;
+}
+
 .FragorNav{
     text-shadow:var(--accent-color2) 1px 10px 12px;
     color:var(--accent-color3) !important;
