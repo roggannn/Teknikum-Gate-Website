@@ -153,7 +153,7 @@ function updateSelectedSeatsDisplay2() {
 
     if (selectedvipSeats.length > 0) {
         displayElement.textContent = `Skriv in vip platserna du bokar i swishen, dina platser är: ${selectedvipSeats.join(', ')}`;
-        price = (parseInt(document.getElementById("antalLabel").textContent) * 250 + parseInt(document.getElementById("antalLabel2").textContent) * 200) + " kr";
+        price = (parseInt(document.getElementById("antalLabel").textContent) * 250 + parseInt(document.getElementById("antalLabel2").textContent) * 150) + " kr";
         document.getElementById('PrisBiljetter').textContent = "Det du ska betala är: " + price;
     } else {
         displayElement.textContent = `Skriv in vip platserna du bokar i swishen, dina platser är: Inga valda`;
